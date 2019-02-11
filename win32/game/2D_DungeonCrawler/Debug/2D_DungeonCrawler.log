@@ -1,0 +1,132 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  game.c
+d:\2d\2dproj\2d_gamedev\src\game.c(44): warning C4305: '+=': truncation from 'double' to 'float'
+  gf2d_draw.c
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(9): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(10): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(11): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(12): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(13): warning C4018: '<': signed/unsigned mismatch
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(16): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(17): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(18): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(19): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(31): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(32): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(33): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(34): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(36): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(37): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(38): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(39): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(50): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(51): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(52): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(53): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(65): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(66): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(67): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(68): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(75): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(76): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(77): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(78): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(80): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(81): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(87): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(88): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(89): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(90): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(105): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(106): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(107): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(108): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(113): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(114): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(115): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(116): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(121): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(122): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(123): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(124): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(125): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(126): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(127): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(128): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(153): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(158): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(168): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(169): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(170): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_draw.c(171): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+  gf2d_graphics.c
+d:\2d\2dproj\2d_gamedev\src\gf2d_graphics.c(126): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_graphics.c(131): warning C4113: 'void (__cdecl *)()' differs in parameter lists from 'void (__cdecl *)(void)'
+d:\2d\2dproj\2d_gamedev\src\gf2d_graphics.c(202): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_graphics.c(219): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_graphics.c(220): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_graphics.c(221): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_graphics.c(222): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+  gf2d_sprite.c
+d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(46): warning C4113: 'void (__cdecl *)()' differs in parameter lists from 'void (__cdecl *)(void)'
+d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(68): warning C4018: '<': signed/unsigned mismatch
+d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(78): warning C4018: '<': signed/unsigned mismatch
+d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(87): warning C4018: '<': signed/unsigned mismatch
+d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(103): warning C4018: '<': signed/unsigned mismatch
+d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(232): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(233): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(234): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(245): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(246): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(247): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(250): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(265): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  gf2d_vector.c
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(29): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(34): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(39): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(44): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(49): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(54): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(240): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(244): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(270): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(275): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(280): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(351): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(352): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(353): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(355): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(356): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(357): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(359): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(360): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(361): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(375): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(376): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(377): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(378): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(393): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(409): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(425): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(442): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(443): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(444): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(445): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(446): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(447): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(448): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(449): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(450): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(474): warning C4244: 'function': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(487): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(488): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(506): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(516): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(524): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(533): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  simple_logger.c
+d:\2d\2dproj\2d_gamedev\src\simple_logger.c(28): warning C4113: 'void (__cdecl *)()' differs in parameter lists from 'void (__cdecl *)(void)'
+  Generating Code...
+  stdafx.cpp
+  2D_DungeonCrawler.vcxproj -> D:\2D\2DProj\2D_GameDev\2D_DungeonCrawler.exe
