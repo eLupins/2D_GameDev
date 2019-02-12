@@ -1,4 +1,5 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  entity.c
   game.c
 d:\2d\2dproj\2d_gamedev\src\game.c(44): warning C4305: '+=': truncation from 'double' to 'float'
   gf2d_draw.c
@@ -68,11 +69,14 @@ d:\2d\2dproj\2d_gamedev\src\gf2d_graphics.c(220): warning C4244: 'function': con
 d:\2d\2dproj\2d_gamedev\src\gf2d_graphics.c(221): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
 d:\2d\2dproj\2d_gamedev\src\gf2d_graphics.c(222): warning C4244: 'function': conversion from 'double' to 'Uint8', possible loss of data
   gf2d_sprite.c
+d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(39): warning C4013: 'memset' undefined; assuming extern returning int
 d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(46): warning C4113: 'void (__cdecl *)()' differs in parameter lists from 'void (__cdecl *)(void)'
 d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(68): warning C4018: '<': signed/unsigned mismatch
 d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(78): warning C4018: '<': signed/unsigned mismatch
 d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(87): warning C4018: '<': signed/unsigned mismatch
 d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(103): warning C4018: '<': signed/unsigned mismatch
+d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(105): warning C4013: 'strncmp' undefined; assuming extern returning int
+d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(182): warning C4013: 'strncpy' undefined; assuming extern returning int
 d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(232): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(233): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
 d:\2d\2dproj\2d_gamedev\src\gf2d_sprite.c(234): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
@@ -128,5 +132,4 @@ d:\2d\2dproj\2d_gamedev\src\gf2d_vector.c(533): warning C4244: '=': conversion f
   simple_logger.c
 d:\2d\2dproj\2d_gamedev\src\simple_logger.c(28): warning C4113: 'void (__cdecl *)()' differs in parameter lists from 'void (__cdecl *)(void)'
   Generating Code...
-  stdafx.cpp
   2D_DungeonCrawler.vcxproj -> D:\2D\2DProj\2D_GameDev\2D_DungeonCrawler.exe

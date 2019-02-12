@@ -72,25 +72,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\2D\2DProj\libs\SDL2_image-2.0.3\include;D:\2D\2DProj\gameframework2d\include;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\include;D:\2D\2DProj\libs\SDL2_ttf-2.0.14\include;$(IncludePath)</IncludePath>
+    <IncludePath>D:\2D\2DProj\libs\SDL2_image-2.0.3\include;D:\2D\2DProj\gameframework2d\include;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\include;D:\2D\2DProj\libs\SDL2_ttf-2.0.14\include;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\include;D:\2D\2DProj\2D_GameDev\include;$(IncludePath)</IncludePath>
     <LibraryPath>D:\2D\2DProj\libs\SDL2_image-2.0.3\lib\x86;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\lib\x86;D:\2D\2DProj\libs\SDL2_ttf-2.0.14\lib\x86;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\lib\x86;$(LibraryPath)</LibraryPath>
     <OutDir>D:\2D\2DProj\2D_GameDev</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\2D\2DProj\libs\SDL2_image-2.0.3\include;D:\2D\2DProj\gameframework2d\include;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\include;D:\2D\2DProj\libs\SDL2_ttf-2.0.14\include;$(IncludePath)</IncludePath>
+    <IncludePath>D:\2D\2DProj\libs\SDL2_image-2.0.3\include;D:\2D\2DProj\gameframework2d\include;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\include;D:\2D\2DProj\libs\SDL2_ttf-2.0.14\include;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\include;D:\2D\2DProj\2D_GameDev\include;$(IncludePath)</IncludePath>
     <LibraryPath>D:\2D\2DProj\libs\SDL2_image-2.0.3\lib\x86;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\lib\x86;D:\2D\2DProj\libs\SDL2_ttf-2.0.14\lib\x86;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\lib\x86;$(LibraryPath)</LibraryPath>
     <OutDir>D:\2D\2DProj\2D_GameDev</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>D:\2D\2DProj\libs\SDL2_image-2.0.3\include;D:\2D\2DProj\gameframework2d\include;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\include;D:\2D\2DProj\libs\SDL2_ttf-2.0.14\include;$(IncludePath)</IncludePath>
+    <IncludePath>D:\2D\2DProj\libs\SDL2_image-2.0.3\include;D:\2D\2DProj\gameframework2d\include;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\include;D:\2D\2DProj\libs\SDL2_ttf-2.0.14\include;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\include;D:\2D\2DProj\2D_GameDev\include;$(IncludePath)</IncludePath>
     <LibraryPath>D:\2D\2DProj\libs\SDL2_image-2.0.3\lib\x86;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\lib\x86;D:\2D\2DProj\libs\SDL2_ttf-2.0.14\lib\x86;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\lib\x86;$(LibraryPath)</LibraryPath>
     <OutDir>D:\2D\2DProj\2D_GameDev</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>D:\2D\2DProj\libs\SDL2_image-2.0.3\include;D:\2D\2DProj\gameframework2d\include;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\include;D:\2D\2DProj\libs\SDL2_ttf-2.0.14\include;$(IncludePath)</IncludePath>
+    <IncludePath>D:\2D\2DProj\libs\SDL2_image-2.0.3\include;D:\2D\2DProj\gameframework2d\include;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\include;D:\2D\2DProj\libs\SDL2_ttf-2.0.14\include;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\include;D:\2D\2DProj\2D_GameDev\include;$(IncludePath)</IncludePath>
     <LibraryPath>D:\2D\2DProj\libs\SDL2_image-2.0.3\lib\x86;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\lib\x86;D:\2D\2DProj\libs\SDL2_ttf-2.0.14\lib\x86;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\lib\x86;$(LibraryPath)</LibraryPath>
     <OutDir>D:\2D\2DProj\2D_GameDev</OutDir>
   </PropertyGroup>
@@ -107,7 +107,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\2D\2DProj\libs\SDL2_ttf-2.0.14\lib\x86;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\lib\x86;D:\2D\2DProj\libs\SDL2_image-2.0.3\lib\x86;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\lib\x86;D:\2D\2DProj\libs\SDL2-2.0.9-win32-x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\2D\2DProj\libs\SDL2_ttf-2.0.14\lib\x86;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\lib\x86;D:\2D\2DProj\libs\SDL2_image-2.0.3\lib\x86;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -124,7 +124,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\2D\2DProj\libs\SDL2_ttf-2.0.14\lib\x86;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\lib\x86;D:\2D\2DProj\libs\SDL2_image-2.0.3\lib\x86;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\lib\x86;D:\2D\2DProj\libs\SDL2-2.0.9-win32-x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\2D\2DProj\libs\SDL2_ttf-2.0.14\lib\x86;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\lib\x86;D:\2D\2DProj\libs\SDL2_image-2.0.3\lib\x86;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -145,7 +145,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\2D\2DProj\libs\SDL2_ttf-2.0.14\lib\x86;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\lib\x86;D:\2D\2DProj\libs\SDL2_image-2.0.3\lib\x86;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\lib\x86;D:\2D\2DProj\libs\SDL2-2.0.9-win32-x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\2D\2DProj\libs\SDL2_ttf-2.0.14\lib\x86;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\lib\x86;D:\2D\2DProj\libs\SDL2_image-2.0.3\lib\x86;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -166,102 +166,33 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\2D\2DProj\libs\SDL2_ttf-2.0.14\lib\x86;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\lib\x86;D:\2D\2DProj\libs\SDL2_image-2.0.3\lib\x86;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\lib\x86;D:\2D\2DProj\libs\SDL2-2.0.9-win32-x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\2D\2DProj\libs\SDL2_ttf-2.0.14\lib\x86;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\lib\x86;D:\2D\2DProj\libs\SDL2_image-2.0.3\lib\x86;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\include\begin_code.h" />
-    <ClInclude Include="..\..\..\include\close_code.h" />
+    <ClInclude Include="..\..\..\include\entity.h" />
+    <ClInclude Include="..\..\..\include\gf2d_actor.h" />
+    <ClInclude Include="..\..\..\include\gf2d_color.h" />
     <ClInclude Include="..\..\..\include\gf2d_draw.h" />
     <ClInclude Include="..\..\..\include\gf2d_graphics.h" />
+    <ClInclude Include="..\..\..\include\gf2d_particles.h" />
+    <ClInclude Include="..\..\..\include\gf2d_shape.h" />
     <ClInclude Include="..\..\..\include\gf2d_sprite.h" />
     <ClInclude Include="..\..\..\include\gf2d_text.h" />
     <ClInclude Include="..\..\..\include\gf2d_types.h" />
     <ClInclude Include="..\..\..\include\gf2d_vector.h" />
-    <ClInclude Include="..\..\..\include\SDL.h" />
-    <ClInclude Include="..\..\..\include\SDL_assert.h" />
-    <ClInclude Include="..\..\..\include\SDL_atomic.h" />
-    <ClInclude Include="..\..\..\include\SDL_audio.h" />
-    <ClInclude Include="..\..\..\include\SDL_bits.h" />
-    <ClInclude Include="..\..\..\include\SDL_blendmode.h" />
-    <ClInclude Include="..\..\..\include\SDL_clipboard.h" />
-    <ClInclude Include="..\..\..\include\SDL_config.h" />
-    <ClInclude Include="..\..\..\include\SDL_cpuinfo.h" />
-    <ClInclude Include="..\..\..\include\SDL_egl.h" />
-    <ClInclude Include="..\..\..\include\SDL_endian.h" />
-    <ClInclude Include="..\..\..\include\SDL_error.h" />
-    <ClInclude Include="..\..\..\include\SDL_events.h" />
-    <ClInclude Include="..\..\..\include\SDL_filesystem.h" />
-    <ClInclude Include="..\..\..\include\SDL_gamecontroller.h" />
-    <ClInclude Include="..\..\..\include\SDL_gesture.h" />
-    <ClInclude Include="..\..\..\include\SDL_haptic.h" />
-    <ClInclude Include="..\..\..\include\SDL_hints.h" />
-    <ClInclude Include="..\..\..\include\SDL_image.h" />
-    <ClInclude Include="..\..\..\include\SDL_joystick.h" />
-    <ClInclude Include="..\..\..\include\SDL_keyboard.h" />
-    <ClInclude Include="..\..\..\include\SDL_keycode.h" />
-    <ClInclude Include="..\..\..\include\SDL_loadso.h" />
-    <ClInclude Include="..\..\..\include\SDL_log.h" />
-    <ClInclude Include="..\..\..\include\SDL_main.h" />
-    <ClInclude Include="..\..\..\include\SDL_messagebox.h" />
-    <ClInclude Include="..\..\..\include\SDL_mixer.h" />
-    <ClInclude Include="..\..\..\include\SDL_mouse.h" />
-    <ClInclude Include="..\..\..\include\SDL_mutex.h" />
-    <ClInclude Include="..\..\..\include\SDL_name.h" />
-    <ClInclude Include="..\..\..\include\SDL_opengl.h" />
-    <ClInclude Include="..\..\..\include\SDL_opengles.h" />
-    <ClInclude Include="..\..\..\include\SDL_opengles2.h" />
-    <ClInclude Include="..\..\..\include\SDL_opengles2_gl2.h" />
-    <ClInclude Include="..\..\..\include\SDL_opengles2_gl2ext.h" />
-    <ClInclude Include="..\..\..\include\SDL_opengles2_gl2platform.h" />
-    <ClInclude Include="..\..\..\include\SDL_opengles2_khrplatform.h" />
-    <ClInclude Include="..\..\..\include\SDL_opengl_glext.h" />
-    <ClInclude Include="..\..\..\include\SDL_pixels.h" />
-    <ClInclude Include="..\..\..\include\SDL_platform.h" />
-    <ClInclude Include="..\..\..\include\SDL_power.h" />
-    <ClInclude Include="..\..\..\include\SDL_quit.h" />
-    <ClInclude Include="..\..\..\include\SDL_rect.h" />
-    <ClInclude Include="..\..\..\include\SDL_render.h" />
-    <ClInclude Include="..\..\..\include\SDL_revision.h" />
-    <ClInclude Include="..\..\..\include\SDL_rwops.h" />
-    <ClInclude Include="..\..\..\include\SDL_scancode.h" />
-    <ClInclude Include="..\..\..\include\SDL_shape.h" />
-    <ClInclude Include="..\..\..\include\SDL_stdinc.h" />
-    <ClInclude Include="..\..\..\include\SDL_surface.h" />
-    <ClInclude Include="..\..\..\include\SDL_system.h" />
-    <ClInclude Include="..\..\..\include\SDL_syswm.h" />
-    <ClInclude Include="..\..\..\include\SDL_test.h" />
-    <ClInclude Include="..\..\..\include\SDL_test_assert.h" />
-    <ClInclude Include="..\..\..\include\SDL_test_common.h" />
-    <ClInclude Include="..\..\..\include\SDL_test_compare.h" />
-    <ClInclude Include="..\..\..\include\SDL_test_crc32.h" />
-    <ClInclude Include="..\..\..\include\SDL_test_font.h" />
-    <ClInclude Include="..\..\..\include\SDL_test_fuzzer.h" />
-    <ClInclude Include="..\..\..\include\SDL_test_harness.h" />
-    <ClInclude Include="..\..\..\include\SDL_test_images.h" />
-    <ClInclude Include="..\..\..\include\SDL_test_log.h" />
-    <ClInclude Include="..\..\..\include\SDL_test_md5.h" />
-    <ClInclude Include="..\..\..\include\SDL_test_random.h" />
-    <ClInclude Include="..\..\..\include\SDL_thread.h" />
-    <ClInclude Include="..\..\..\include\SDL_timer.h" />
-    <ClInclude Include="..\..\..\include\SDL_touch.h" />
-    <ClInclude Include="..\..\..\include\SDL_ttf.h" />
-    <ClInclude Include="..\..\..\include\SDL_types.h" />
-    <ClInclude Include="..\..\..\include\SDL_version.h" />
-    <ClInclude Include="..\..\..\include\SDL_video.h" />
     <ClInclude Include="..\..\..\include\simple_logger.h" />
-    <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\src\entity.c" />
     <ClCompile Include="..\..\..\src\game.c" />
     <ClCompile Include="..\..\..\src\gf2d_draw.c" />
     <ClCompile Include="..\..\..\src\gf2d_graphics.c" />
     <ClCompile Include="..\..\..\src\gf2d_sprite.c" />
     <ClCompile Include="..\..\..\src\gf2d_vector.c" />
     <ClCompile Include="..\..\..\src\simple_logger.c" />
-    <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\src\Makefile" />
