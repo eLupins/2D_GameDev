@@ -1,6 +1,7 @@
 #include "entity.h"
 #include "simple_logger.h"
 
+
 /**Creating the Entity Manager struct*/
 typedef struct {
 
@@ -150,6 +151,30 @@ void entity_think_all() {
 	}
 }
 
+void entity_update(Entity *self)
+{
+	if (!self)return;
+	if (!self->inUse)return;
+
+	if (self->die != 0)
+	{
+		entity_free(self);
+		return;
+	}
+
+	/*collision handles position and velocity*/
+	vector2d_add(self->velocity, self->velocity, self->acceleration);
+
+	//gf2d_particle_emitter_update(self->pe); 	/*For particle system*/
+
+	gf2d_actor_next_frame(&self->actor);
+
+	if (self->update != NULL)
+	{
+		self->update(self);
+	}
+}
+
 void entity_update_all() {
 
 	int i = 0;
@@ -157,7 +182,7 @@ void entity_update_all() {
 
 		if (entityManager.entityList[i].inUse == 0)
 			continue;
-		gf2d_entity_update(&entityManager.entityList[i]);
+		entity_update(&entityManager.entityList[i]);
 	}
 }
 

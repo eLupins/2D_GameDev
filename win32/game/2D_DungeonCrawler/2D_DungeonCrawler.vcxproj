@@ -75,12 +75,14 @@
     <IncludePath>D:\2D\2DProj\libs\SDL2_image-2.0.3\include;D:\2D\2DProj\gameframework2d\include;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\include;D:\2D\2DProj\libs\SDL2_ttf-2.0.14\include;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\include;D:\2D\2DProj\2D_GameDev\include;$(IncludePath)</IncludePath>
     <LibraryPath>D:\2D\2DProj\libs\SDL2_image-2.0.3\lib\x86;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\lib\x86;D:\2D\2DProj\libs\SDL2_ttf-2.0.14\lib\x86;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\lib\x86;$(LibraryPath)</LibraryPath>
     <OutDir>D:\2D\2DProj\2D_GameDev</OutDir>
+    <ExecutablePath>D:\2D\2DProj\2D_GameDev;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>D:\2D\2DProj\libs\SDL2_image-2.0.3\include;D:\2D\2DProj\gameframework2d\include;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\include;D:\2D\2DProj\libs\SDL2_ttf-2.0.14\include;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\include;D:\2D\2DProj\2D_GameDev\include;$(IncludePath)</IncludePath>
     <LibraryPath>D:\2D\2DProj\libs\SDL2_image-2.0.3\lib\x86;D:\2D\2DProj\libs\SDL2_mixer-2.0.2\lib\x86;D:\2D\2DProj\libs\SDL2_ttf-2.0.14\lib\x86;D:\2D\2DProj\libs\SDL2-devel-2.0.9-VC\SDL2-2.0.9\lib\x86;$(LibraryPath)</LibraryPath>
     <OutDir>D:\2D\2DProj\2D_GameDev</OutDir>
+    <ExecutablePath>D:\2D\2DProj\2D_GameDev;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -182,19 +184,27 @@
     <ClInclude Include="..\..\..\include\gf2d_text.h" />
     <ClInclude Include="..\..\..\include\gf2d_types.h" />
     <ClInclude Include="..\..\..\include\gf2d_vector.h" />
+    <ClInclude Include="..\..\..\include\simple_json.h" />
     <ClInclude Include="..\..\..\include\simple_logger.h" />
+    <ClInclude Include="gf2d_list.h" />
+    <ClInclude Include="gf2d_text.h" />
+    <ClInclude Include="input_manager.h" />
+    <ClInclude Include="player.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\src\entity.c" />
     <ClCompile Include="..\..\..\src\game.c" />
+    <ClCompile Include="..\..\..\src\gf2d_actor.c" />
     <ClCompile Include="..\..\..\src\gf2d_draw.c" />
     <ClCompile Include="..\..\..\src\gf2d_graphics.c" />
     <ClCompile Include="..\..\..\src\gf2d_sprite.c" />
     <ClCompile Include="..\..\..\src\gf2d_vector.c" />
     <ClCompile Include="..\..\..\src\simple_logger.c" />
+    <ClCompile Include="input_manager.c" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\config\input.cfg" />
     <None Include="..\..\..\src\Makefile" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
