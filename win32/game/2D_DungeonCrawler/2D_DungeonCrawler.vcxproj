@@ -186,6 +186,7 @@
     <ClInclude Include="..\..\..\include\gf2d_vector.h" />
     <ClInclude Include="..\..\..\include\simple_json.h" />
     <ClInclude Include="..\..\..\include\simple_logger.h" />
+    <ClInclude Include="audio_manager.h" />
     <ClInclude Include="gf2d_list.h" />
     <ClInclude Include="gf2d_text.h" />
     <ClInclude Include="input_manager.h" />
@@ -201,7 +202,9 @@
     <ClCompile Include="..\..\..\src\gf2d_sprite.c" />
     <ClCompile Include="..\..\..\src\gf2d_vector.c" />
     <ClCompile Include="..\..\..\src\simple_logger.c" />
+    <ClCompile Include="audio_manager.c" />
     <ClCompile Include="input_manager.c" />
+    <ClCompile Include="player.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\config\input.cfg" />

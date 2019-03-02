@@ -37,7 +37,7 @@ int main(int argc, char * argv[])
 	entity_system_init(1024); /* initialize entity system */
     /*demo setup*/
     sprite = gf2d_sprite_load_image("images/backgrounds/bg_flat.png");
-    mouse = gf2d_sprite_load_all("images/pointer.png",32,32,16);
+    mouse = gf2d_sprite_load_all("images/pointer.png",32,32,16, 1);
 	demo = gf2d_sprite_load_image("images/watcher-charm.png");     /*Just a stand in*/
     /*main game loop*/
     while(!done)

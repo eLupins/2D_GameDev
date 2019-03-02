@@ -439,10 +439,7 @@ SDL_Scancode gf2d_input_key_to_scancode(const char *buffer) {
 		{
 			sc = SDL_SCANCODE_ESCAPE;
 		}
-		else if (strcmp(buffer, "ENTER") == 0)
-		{
-			sc = SDL_SCANCODE_KP_ENTER;
-		}
+		
 	}
 	if (sc == -1)
 	{
