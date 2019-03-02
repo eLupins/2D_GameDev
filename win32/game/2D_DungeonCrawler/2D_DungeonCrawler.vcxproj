@@ -173,6 +173,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\include\audio_manager.h" />
     <ClInclude Include="..\..\..\include\entity.h" />
     <ClInclude Include="..\..\..\include\gf2d_actor.h" />
     <ClInclude Include="..\..\..\include\gf2d_color.h" />
@@ -186,7 +187,6 @@
     <ClInclude Include="..\..\..\include\gf2d_vector.h" />
     <ClInclude Include="..\..\..\include\simple_json.h" />
     <ClInclude Include="..\..\..\include\simple_logger.h" />
-    <ClInclude Include="audio_manager.h" />
     <ClInclude Include="gf2d_list.h" />
     <ClInclude Include="gf2d_text.h" />
     <ClInclude Include="input_manager.h" />

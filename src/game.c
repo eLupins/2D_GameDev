@@ -3,6 +3,8 @@
 #include "gf2d_sprite.h"
 #include "simple_logger.h"
 #include "entity.h"
+#include "audio_manager.h"
+
 
 //a random comment
 int main(int argc, char * argv[])
@@ -32,6 +34,7 @@ int main(int argc, char * argv[])
         vector4d(0,0,0,255),
         0);
     gf2d_graphics_set_frame_delay(16);
+	audiosys_init(256, 16, 4, 1, 1, 1);
     gf2d_sprite_init(1024);
     SDL_ShowCursor(SDL_DISABLE);
 	entity_system_init(1024); /* initialize entity system */
