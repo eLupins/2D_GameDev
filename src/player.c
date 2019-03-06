@@ -140,6 +140,15 @@ void player_think(Entity *self)
                     self->velocity.x += 1.25;
                 }
             }
+			/** Add ons; walking up and walking down**/
+			if (gf2d_input_command_down("walkup")) {
+				self->velocity.y -= 1.25;
+
+			}
+			if (gf2d_input_command_down("walkdown")) {
+				self->velocity.y += 1.25;
+			}
+			///////////////////////////////////////////
             if (((gf2d_input_command_pressed("jump"))&&(self->grounded))&&(!self->jumpcool))
             {
                 self->velocity.y -= 10;
@@ -181,7 +190,15 @@ void player_update(Entity *self)
         self->velocity.x *= 0.8;
         if (fabs(self->velocity.x) < 1)self->velocity.x = 0;
     }
-    entity_apply_gravity(self);
+	/** Add on; apply walk dampening to y axis movement  **/
+	if (self->velocity.y) {
+		self->velocity.y *= 0.8;
+		if (fabs(self->velocity.y) < 1)
+			self->velocity.y = 0;
+
+	}
+	/** Get rid of apply gravity since its not needed for a top down game*/
+  //  entity_apply_gravity(self);
     entity_world_snap(self);    // error correction for collision system
     switch (self->state)
     {

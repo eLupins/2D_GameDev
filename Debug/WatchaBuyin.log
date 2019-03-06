@@ -1,4 +1,5 @@
-﻿  game.c
-  simple_json.c
-  Generating Code...
+﻿  player.c
+d:\2d\2dproj\watchabuyin\watchabuyin\src\player.c(30): warning C4305: 'initializing': truncation from 'double' to 'float'
+d:\2d\2dproj\watchabuyin\watchabuyin\src\player.c(155): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\player.c(178): warning C4305: '-=': truncation from 'double' to 'float'
   WatchaBuyin.vcxproj -> D:\2D\2DProj\WatchaBuyin\WatchaBuyin\WatchaBuyin.exe

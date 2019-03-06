@@ -44,7 +44,7 @@ int entity_camera_view(Entity *self)
 
 void entity_apply_gravity(Entity *self)
 {
-    self->velocity.y += 0.58;
+    //self->velocity.y += 0.58;
     if (entity_ground_check(self,1))
     {
         if (self->velocity.y > 0)self->velocity.y = 0;

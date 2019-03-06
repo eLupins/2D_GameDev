@@ -356,6 +356,18 @@ SDL_Scancode gf2d_input_key_to_scancode(const char * buffer)
         {
             kc = SDL_SCANCODE_BACKSPACE;
         }
+		else if (strcmp(buffer, "SPACE") == 0)
+		{
+			kc = SDL_SCANCODE_SPACE;
+		}
+		else if (strcmp(buffer, "W") == 0)
+		{
+			kc = SDL_SCANCODE_W;
+		}
+		else if (strcmp(buffer, "S") == 0)
+		{
+			kc = SDL_SCANCODE_S;
+		}
         else if (strcmp(buffer,"LALT") == 0)
         {
             kc = SDL_SCANCODE_LALT;

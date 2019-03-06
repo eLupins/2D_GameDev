@@ -1,4 +1,4 @@
-sprite: images/ymirplayer.png
+sprite: images/entities/player_standin.png
 frameWidth: 128
 frameHeight: 128
 framesPerLine: 16
