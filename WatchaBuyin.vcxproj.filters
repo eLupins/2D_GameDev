@@ -272,6 +272,9 @@
     <ClCompile Include="src\simple_json_string.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="entity_bard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Makefile">

@@ -179,6 +179,7 @@
     <ClInclude Include="include\windows_common.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="entity_bard.c" />
     <ClCompile Include="src\camera.c" />
     <ClCompile Include="src\editor.c" />
     <ClCompile Include="src\entity_common.c" />
