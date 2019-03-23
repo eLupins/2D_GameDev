@@ -1,0 +1,55 @@
+sprite: images/entities/bard_standin.png
+frameWidth: 64
+frameHeight: 64
+framesPerLine: 16
+color: 255,255,255,255
+colorSpecial: 10,100,255,255
+scale: 1,1
+
+action: idle
+startFrame: 0
+endFrame: 1
+frameRate: 0.1
+type:   loop
+
+action: attack1
+startFrame: 0
+endFrame: 1
+frameRate: 0.1
+type:   pass
+
+action: attack2
+startFrame: 0
+endFrame: 1
+frameRate: 0.1
+type:   pass
+
+action: attack3
+startFrame: 0
+endFrame: 1
+frameRate: 0.1
+type:   pass
+
+action: pain1
+startFrame: 0
+endFrame: 1
+frameRate: 0.1
+type:   pass
+
+action: pain2
+startFrame: 0
+endFrame: 1
+frameRate: 0.1
+type:   pass
+
+action: death1
+startFrame: 0
+endFrame: 1
+frameRate: 0.1
+type:   pass
+
+action: death2
+startFrame: 0
+endFrame: 1
+frameRate: 0.1
+type:   pass

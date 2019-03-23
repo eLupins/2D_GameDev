@@ -1,3 +1,4 @@
+
 #include "monster.h"
 #include "level.h"
 #include "simple_logger.h"
@@ -13,20 +14,21 @@ Entity *monster_new(Vector2D position,char *actorFile);
 
 void monster_spawn(Vector2D position,SJson *args)
 {
-    monster_new(position,"actors/space_bug.actor");
+    monster_new(position,"actors/bard.actor");
 }
 
 
 Entity *monster_new(Vector2D position,char *actorFile)
 {
+
     Entity *self;
     self = gf2d_entity_new();
     if (!self)return NULL;
     
     gf2d_line_cpy(self->name,"monster");
     self->parent = NULL;
-    
-    self->shape = gf2d_shape_rect(-32, -16, 60, 30);
+                                 //x on left;y the top of the rect, width, height 
+    self->shape = gf2d_shape_rect( -60, -60, 57, 57);
     gf2d_body_set(
         &self->body,
         "monster",

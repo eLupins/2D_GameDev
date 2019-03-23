@@ -42,7 +42,8 @@ typedef struct Entity_S
     Vector2D scaleCenter;                   /**<where to scale sprite from*/
     Vector3D rotation;                      /**<how to rotate the sprite*/
     Vector2D flip;                          /**<if to flip the sprite*/
-    
+	Vector2D facing;						/** Which direction is the entity facing **/
+
     ParticleEmitter *pe;                    /**<if this entity has its own particle emitter*/
 
     /*sound*/

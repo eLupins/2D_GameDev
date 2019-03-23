@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{e6c30212-f2af-4e68-9dd2-2cfecb369ab4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="actors">
+      <UniqueIdentifier>{1ae9ce41-1f43-4c68-9e8d-1472af80ee59}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\camera.h">
@@ -142,6 +148,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\simple_json_value.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entity_bard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="level_graph.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -275,10 +287,76 @@
     <ClCompile Include="entity_bard.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="level_graph.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Makefile">
       <Filter>Source Files</Filter>
+    </None>
+    <None Include="config\editor_main.json">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="config\font.cfg">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="config\input.cfg">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="config\testfile.json">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="config\testwindow.cfg">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="config\testwindow.min">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="config\testworld.json">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="config\text_entry_window.json">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="config\yes_no_window.json">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="actors\bard.actor">
+      <Filter>actors</Filter>
+    </None>
+    <None Include="actors\button.actor">
+      <Filter>actors</Filter>
+    </None>
+    <None Include="actors\charge_bolt.actor">
+      <Filter>actors</Filter>
+    </None>
+    <None Include="actors\crysalis.actor">
+      <Filter>actors</Filter>
+    </None>
+    <None Include="actors\disk_icon.actor">
+      <Filter>actors</Filter>
+    </None>
+    <None Include="actors\essence.actor">
+      <Filter>actors</Filter>
+    </None>
+    <None Include="actors\mouse.actor">
+      <Filter>actors</Filter>
+    </None>
+    <None Include="actors\new_icon.actor">
+      <Filter>actors</Filter>
+    </None>
+    <None Include="actors\player.actor">
+      <Filter>actors</Filter>
+    </None>
+    <None Include="actors\save_icon.actor">
+      <Filter>actors</Filter>
+    </None>
+    <None Include="actors\space_bug.actor">
+      <Filter>actors</Filter>
+    </None>
+    <None Include="r1.json">
+      <Filter>Config</Filter>
     </None>
   </ItemGroup>
 </Project>

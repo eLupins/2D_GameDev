@@ -134,6 +134,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="entity_bard.h" />
     <ClInclude Include="include\camera.h" />
     <ClInclude Include="include\editor.h" />
     <ClInclude Include="include\entity_common.h" />
@@ -177,9 +178,11 @@
     <ClInclude Include="include\simple_logger.h" />
     <ClInclude Include="include\spawn.h" />
     <ClInclude Include="include\windows_common.h" />
+    <ClInclude Include="level_graph.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="entity_bard.c" />
+    <ClCompile Include="level_graph.c" />
     <ClCompile Include="src\camera.c" />
     <ClCompile Include="src\editor.c" />
     <ClCompile Include="src\entity_common.c" />
@@ -224,6 +227,27 @@
     <ClCompile Include="src\windows_common.c" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="actors\bard.actor" />
+    <None Include="actors\button.actor" />
+    <None Include="actors\charge_bolt.actor" />
+    <None Include="actors\crysalis.actor" />
+    <None Include="actors\disk_icon.actor" />
+    <None Include="actors\essence.actor" />
+    <None Include="actors\mouse.actor" />
+    <None Include="actors\new_icon.actor" />
+    <None Include="actors\player.actor" />
+    <None Include="actors\save_icon.actor" />
+    <None Include="actors\space_bug.actor" />
+    <None Include="config\editor_main.json" />
+    <None Include="config\font.cfg" />
+    <None Include="config\input.cfg" />
+    <None Include="config\testfile.json" />
+    <None Include="config\testwindow.cfg" />
+    <None Include="config\testwindow.min" />
+    <None Include="config\testworld.json" />
+    <None Include="config\text_entry_window.json" />
+    <None Include="config\yes_no_window.json" />
+    <None Include="r1.json" />
     <None Include="src\Makefile" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

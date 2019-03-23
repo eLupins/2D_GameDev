@@ -40,8 +40,8 @@ void editor_new_map(void *data)
 {
     editorData.level = level_info_create(
         "images/backgrounds/bg_flat.png",
-        "music/old_city_theme.ogg",
-        "images/tiles/basetile.png",
+        "music/13_Cave_of_Time.mp3",
+        "images/backgrounds/floor.png",
         vector2d(32,32),
         vector2d(38,24));
     level_init(editorData.level,0);
