@@ -13,6 +13,13 @@ typedef struct
     Sprite     *backgroundImage;
     Sprite     *tileLayer;
     Sprite     *tileSet;
+	/* Additional sprites I added in the json world files */
+	Sprite		*topWall;
+	Sprite		*bottomWall;
+	Sprite		*rWall;
+	Sprite		*lWall;
+	Sprite		*Pillar;
+
     Mix_Music  *backgroundMusic;
 }Level;
 
@@ -26,6 +33,12 @@ void level_clear()
     gf2d_sprite_free(gamelevel.backgroundImage);
     gf2d_sprite_free(gamelevel.tileSet);
     gf2d_sprite_free(gamelevel.tileLayer);
+	gf2d_sprite_free(gamelevel.topWall);
+	gf2d_sprite_free(gamelevel.bottomWall);
+	gf2d_sprite_free(gamelevel.lWall);
+	gf2d_sprite_free(gamelevel.rWall);
+	gf2d_sprite_free(gamelevel.Pillar);
+
     if (gamelevel.backgroundMusic)
     {
         Mix_FreeMusic(gamelevel.backgroundMusic);
@@ -63,6 +76,11 @@ LevelInfo *level_info_create(
     const char *backgroundImage,
     const char *backgroundMusic,
     const char *tileSet,
+	const char *topWall,
+	const char *lWall,
+	const char *bottomWall,
+	const char *rWall,
+	const char *Pillar,
     Vector2D    tileSize,
     Vector2D    tileMapSize
 )
@@ -73,6 +91,12 @@ LevelInfo *level_info_create(
     gf2d_line_cpy(linfo->backgroundImage,backgroundImage);
     gf2d_line_cpy(linfo->backgroundMusic,backgroundMusic);
     gf2d_line_cpy(linfo->tileSet,tileSet);
+	/** my sprites **/
+	gf2d_line_cpy(linfo->topWall, topWall);
+	gf2d_line_cpy(linfo->lWall, lWall);
+	gf2d_line_cpy(linfo->bottomWall, bottomWall);
+	gf2d_line_cpy(linfo->rWall, rWall);
+	gf2d_line_cpy(linfo->Pillar, Pillar);
     vector2d_copy(linfo->tileSize,tileSize);
     vector2d_copy(linfo->tileMapSize,tileMapSize);
     linfo->tileMap = level_alloc_tilemap(tileMapSize.x,tileMapSize.y);
@@ -126,6 +150,8 @@ LevelInfo *level_info_load(char *filename)
 {
     LevelInfo *linfo = NULL;
     SJson *json,*world;
+	char buffer[512] = "";
+
     if (!filename)return NULL;
     json = sj_load(filename);
     if (!json)
@@ -149,7 +175,20 @@ LevelInfo *level_info_load(char *filename)
     gf2d_line_cpy(linfo->backgroundImage,sj_get_string_value(sj_object_get_value(world,"backgroundImage")));
     gf2d_line_cpy(linfo->backgroundMusic,sj_get_string_value(sj_object_get_value(world,"backgroundMusic")));
     gf2d_line_cpy(linfo->tileSet,sj_get_string_value(sj_object_get_value(world,"tileSet")));
-    
+
+
+	///My sprite tiles 
+	//if (linfo->topWall != NULL)
+	//{
+	//	free(linfo->topWall);
+	//}
+	//linfo->topWall = (char *)malloc(sizeof(char) * 128);
+	gf2d_line_cpy(linfo->topWall, sj_get_string_value(sj_object_get_value(world, "topWall")));
+	gf2d_line_cpy(linfo->bottomWall, sj_get_string_value(sj_object_get_value(world, "bottomWall")));
+	gf2d_line_cpy(linfo->rWall, sj_get_string_value(sj_object_get_value(world, "rWall")));
+	gf2d_line_cpy(linfo->lWall, sj_get_string_value(sj_object_get_value(world, "lWall")));
+	gf2d_line_cpy(linfo->Pillar, sj_get_string_value(sj_object_get_value(world, "Pillar")));
+	
     sj_value_as_vector2d(sj_object_get_value(world,"tileMapSize"),&linfo->tileMapSize);
     slog("loaded tile size of %f,%f",linfo->tileMapSize.x,linfo->tileMapSize.y);
     
@@ -208,7 +247,31 @@ void level_make_tile_layer(LevelInfo *linfo)
     {
         for (i = 0; i < linfo->tileMapSize.x;i++)
         {
-            if (linfo->tileMap[j*(Uint32)linfo->tileMapSize.x + i])
+			switch (linfo->tileMap[j*(Uint32)linfo->tileMapSize.x + i])
+			{
+				//each case refers to a different tile to draw
+			case 1:
+				gf2d_sprite_draw_to_surface(
+					gamelevel.tileSet,
+					vector2d(i*linfo->tileSize.x, j*linfo->tileSize.y),
+					NULL,
+					NULL,
+					linfo->tileMap[j*(Uint32)linfo->tileMapSize.x + i] - 1,
+					sprite->surface);
+				break;
+			case 2:
+				gf2d_sprite_draw_to_surface(
+					gamelevel.topWall,
+					vector2d(i*linfo->tileSize.x, j*linfo->tileSize.y),
+					NULL,
+					NULL,
+					linfo->tileMap[j*(Uint32)linfo->tileMapSize.x + i] - 1,
+					sprite->surface);
+				break;
+			default:
+				break;
+			}
+            /*if (linfo->tileMap[j*(Uint32)linfo->tileMapSize.x + i])
             {
                 gf2d_sprite_draw_to_surface(
                 gamelevel.tileSet,
@@ -217,7 +280,7 @@ void level_make_tile_layer(LevelInfo *linfo)
                 NULL,
                 linfo->tileMap[j*(Uint32)linfo->tileMapSize.x + i] - 1,
                 sprite->surface);
-            }
+            }*/
         }
     }
 
@@ -324,12 +387,46 @@ void level_init(LevelInfo *linfo,Uint8 space)
     }
     level_clear();
     gamelevel.backgroundImage = gf2d_sprite_load_image(linfo->backgroundImage);
+
+	/**
+	 * Load a sprite of the correct tile to use
+	 */
     gamelevel.tileSet = gf2d_sprite_load_all(
         linfo->tileSet,
         linfo->tileSize.x,
         linfo->tileSize.y,
         1,
         true);
+	gamelevel.topWall = gf2d_sprite_load_all(
+		linfo->topWall,
+		linfo->tileSize.x,
+		linfo->tileSize.y,
+		1,
+		true);
+	gamelevel.bottomWall = gf2d_sprite_load_all(
+		linfo->bottomWall,
+		linfo->tileSize.x,
+		linfo->tileSize.y,
+		1,
+		true);
+	gamelevel.rWall = gf2d_sprite_load_all(
+		linfo->rWall,
+		linfo->tileSize.x,
+		linfo->tileSize.y,
+		1,
+		true);
+	gamelevel.lWall = gf2d_sprite_load_all(
+		linfo->lWall,
+		linfo->tileSize.x,
+		linfo->tileSize.y,
+		1,
+		true);
+	gamelevel.Pillar = gf2d_sprite_load_all(
+		linfo->Pillar,
+		linfo->tileSize.x,
+		linfo->tileSize.y,
+		1,
+		true);
 
     gamelevel.backgroundMusic = Mix_LoadMUS(linfo->backgroundMusic);
     if (gamelevel.backgroundMusic)Mix_PlayMusic(gamelevel.backgroundMusic, -1);

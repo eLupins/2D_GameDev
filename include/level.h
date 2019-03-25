@@ -27,6 +27,15 @@ typedef struct
     Vector2D    tileMapSize;        /**<how tile space width & height*/
     int        *tileMap;            /**<tile data*/
     SJson      *spawnList;
+
+	/* Additional sprites I added in the json world files */
+	char		topWall[128];			/** top wall image for this level **/
+	char	bottomWall[128];			/** bottom wall image for this level **/
+	char	rWall[128];				/** right wall image for this level **/
+	char	lWall[128];				/** left wall image for this level **/
+	char	Pillar[128];				/** pillar wall image for this level **/
+
+
 }LevelInfo;
 
 /**
