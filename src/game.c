@@ -13,6 +13,8 @@
 #include "level.h"
 #include "editor.h"
 #include "windows_common.h"
+#include "level_graph.h"
+
 
 static int _done = 0;
 static Window *_quit = NULL;
@@ -35,6 +37,9 @@ int main(int argc, char * argv[])
     int editorMode = 0;
     int fullscreen = 0;
 	SDL_Event e;
+	char jsonFileName[MAX_FILE_LENGTH] = "";
+
+
     /*parse args*/
     for (i = 1; i < argc; i++)
     {
@@ -70,11 +75,15 @@ int main(int argc, char * argv[])
     
     camera_set_dimensions(0,0,1200,700);
     
-    SDL_ShowCursor(SDL_DISABLE);
+	create_level("rooms/lvl1.txt"); //text file list of level .jsons
+
+   SDL_ShowCursor(SDL_DISABLE);
     // game specific setup
     if (!editorMode)
     {
-        linfo = level_info_load("config/testworld.json");
+       // linfo = level_info_load("config/testworld.json");
+		strncpy(jsonFileName, begin_level(), MAX_FILE_LENGTH);
+		linfo = level_info_load(jsonFileName);
         level_init(linfo,1);
     }
     else
@@ -87,6 +96,7 @@ int main(int argc, char * argv[])
     /*main game loop*/
     while(!_done)
     {
+		
         gf2d_input_update();
         /*update things here*/
         gf2d_windows_update_all();

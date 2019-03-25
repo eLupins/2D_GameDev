@@ -168,7 +168,7 @@ void level_make_space()
 {
     gamelevel.space = gf2d_space_new_full(
         3,
-        gf2d_rect(0,0,gamelevel.tileLayer->surface->w,gamelevel.tileLayer->surface->h),
+        gf2d_rect(-50,-50,gamelevel.tileLayer->surface->w + 50,gamelevel.tileLayer->surface->h +50),
         0.1,
         vector2d(0,0),
         1,

@@ -63,6 +63,20 @@ void gf2d_entity_free(Entity *self)
     memset(self,0,sizeof(Entity));
 }
 
+void gf2d_entity_free_all_except(Entity *saveme) {
+
+	int i = 0;
+	for (i = 0; i < entity_manager.maxEntities; i++) {
+		if (&entity_manager.entityList[i]) {
+			if (&entity_manager.entityList[i] != saveme) {
+
+				gf2d_entity_free(&entity_manager.entityList[i]);
+			}
+		}
+	}
+
+}
+
 Entity *gf2d_entity_new()
 {
     int i;

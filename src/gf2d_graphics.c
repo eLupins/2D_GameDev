@@ -197,6 +197,17 @@ Vector2D gf2d_graphics_get_resolution()
     return vector2d(gf2d_graphics.renderWidth,gf2d_graphics.renderHeight);
 }
 
+Uint32 gf2d_graphics_get_rendwidth() {
+
+	return gf2d_graphics.renderWidth;
+}
+
+Uint32 gf2d_graphics_get_rendheight() {
+
+	return gf2d_graphics.renderHeight;
+}
+
+
 void gf2d_graphics_frame_delay()
 {
     Uint32 diff;

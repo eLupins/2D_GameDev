@@ -164,6 +164,7 @@
     <ClInclude Include="include\gf2d_vector.h" />
     <ClInclude Include="include\gf2d_windows.h" />
     <ClInclude Include="include\level.h" />
+    <ClInclude Include="include\level_graph.h" />
     <ClInclude Include="include\monster.h" />
     <ClInclude Include="include\pickup.h" />
     <ClInclude Include="include\player.h" />
@@ -178,11 +179,9 @@
     <ClInclude Include="include\simple_logger.h" />
     <ClInclude Include="include\spawn.h" />
     <ClInclude Include="include\windows_common.h" />
-    <ClInclude Include="level_graph.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="entity_bard.c" />
-    <ClCompile Include="level_graph.c" />
     <ClCompile Include="src\camera.c" />
     <ClCompile Include="src\editor.c" />
     <ClCompile Include="src\entity_common.c" />
@@ -212,6 +211,7 @@
     <ClCompile Include="src\gf2d_vector.c" />
     <ClCompile Include="src\gf2d_windows.c" />
     <ClCompile Include="src\level.c" />
+    <ClCompile Include="src\level_graph.c" />
     <ClCompile Include="src\monster.c" />
     <ClCompile Include="src\pickup.c" />
     <ClCompile Include="src\player.c" />
@@ -244,10 +244,10 @@
     <None Include="config\testfile.json" />
     <None Include="config\testwindow.cfg" />
     <None Include="config\testwindow.min" />
-    <None Include="config\testworld.json" />
     <None Include="config\text_entry_window.json" />
     <None Include="config\yes_no_window.json" />
-    <None Include="r1.json" />
+    <None Include="rooms\r1.json" />
+    <None Include="rooms\testworld.json" />
     <None Include="src\Makefile" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

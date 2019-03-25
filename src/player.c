@@ -4,6 +4,7 @@
 #include "level.h"
 #include "gf2d_input.h"
 #include "entity_common.h"
+#include "level_graph.h"
 
 static Entity *_player = NULL;
 
@@ -171,6 +172,7 @@ void player_think(Entity *self)
 
 void player_update(Entity *self)
 {
+
     Vector2D camPosition = {0,0};
     if (!self)return;
     
@@ -200,6 +202,7 @@ void player_update(Entity *self)
 	/** Get rid of apply gravity since its not needed for a top down game*/
   //  entity_apply_gravity(self);
     entity_world_snap(self);    // error correction for collision system
+	door_check(self);
     switch (self->state)
     {
         case ES_Idle:

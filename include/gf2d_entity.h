@@ -89,6 +89,8 @@ Entity *gf2d_entity_new();
  */
 void gf2d_entity_free(Entity *self);
 
+void gf2d_entity_free_all_except(Entity *saveme);
+
 /**
  * @brief draw a single entity
  * @param self the entity to draw
@@ -131,3 +133,4 @@ void gf2d_entity_post_sync_all();
  */
 int gf2d_entity_deal_damage(Entity *target, Entity *inflictor, Entity *attacker,int damage,Vector2D kick);
 #endif
+

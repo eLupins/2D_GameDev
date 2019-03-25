@@ -153,7 +153,7 @@
     <ClInclude Include="entity_bard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="level_graph.h">
+    <ClInclude Include="include\level_graph.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -287,7 +287,7 @@
     <ClCompile Include="entity_bard.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="level_graph.c">
+    <ClCompile Include="src\level_graph.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -311,9 +311,6 @@
       <Filter>Config</Filter>
     </None>
     <None Include="config\testwindow.min">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="config\testworld.json">
       <Filter>Config</Filter>
     </None>
     <None Include="config\text_entry_window.json">
@@ -355,7 +352,10 @@
     <None Include="actors\space_bug.actor">
       <Filter>actors</Filter>
     </None>
-    <None Include="r1.json">
+    <None Include="rooms\r1.json">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="rooms\testworld.json">
       <Filter>Config</Filter>
     </None>
   </ItemGroup>

@@ -1,0 +1,2 @@
+rooms/r1.json
+rooms/testworld.json

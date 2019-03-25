@@ -84,4 +84,7 @@ void gf2d_graphics_blit_surface_to_screen(SDL_Surface *surface,const SDL_Rect * 
  */
 SDL_Surface *gf2d_graphics_screen_convert(SDL_Surface **surface);
 
+Uint32 gf2d_graphics_get_rendwidth();
+Uint32 gf2d_graphics_get_rendheight();
+
 #endif
