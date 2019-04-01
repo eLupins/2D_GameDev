@@ -268,9 +268,22 @@ void level_make_tile_layer(LevelInfo *linfo)
 					linfo->tileMap[j*(Uint32)linfo->tileMapSize.x + i] - 1,
 					sprite->surface);
 				break;
+			case 3:
+				gf2d_sprite_draw_to_surface(
+					gamelevel.bottomWall,
+					vector2d(i*linfo->tileSize.x, j*linfo->tileSize.y),
+					NULL,
+					NULL,
+					linfo->tileMap[j*(Uint32)linfo->tileMapSize.x + i] - 1,
+					sprite->surface);
+				break;
+
+
 			default:
 				break;
 			}
+			
+
             /*if (linfo->tileMap[j*(Uint32)linfo->tileMapSize.x + i])
             {
                 gf2d_sprite_draw_to_surface(

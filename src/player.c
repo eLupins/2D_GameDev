@@ -7,6 +7,8 @@
 #include "level_graph.h"
 
 static Entity *_player = NULL;
+static Entity * projectile = NULL;
+static int projectileCount = 0;
 
 void player_draw(Entity *self);
 void player_think(Entity *self);
@@ -25,6 +27,8 @@ typedef struct
     float energy,energyMax;
     int capacitors,capacitorsMax;
     int attackType;
+	
+
 }PlayerData;
 
 

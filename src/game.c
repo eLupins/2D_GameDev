@@ -14,6 +14,7 @@
 #include "editor.h"
 #include "windows_common.h"
 #include "level_graph.h"
+#include "UI.h"
 
 
 static int _done = 0;
@@ -128,10 +129,13 @@ int main(int argc, char * argv[])
                 if (!editorMode)
                 {
                     gf2d_entity_update_all();
+					ui_update_all();
                 }
                 // Draw entities
             //UI elements last
             gf2d_windows_draw_all();
+			ui_draw_all();
+
             if (editorMode)
             {
                 gf2d_mouse_draw();

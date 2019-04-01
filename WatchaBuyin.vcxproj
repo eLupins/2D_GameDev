@@ -178,10 +178,13 @@
     <ClInclude Include="include\simple_json_value.h" />
     <ClInclude Include="include\simple_logger.h" />
     <ClInclude Include="include\spawn.h" />
+    <ClInclude Include="include\UI.h" />
     <ClInclude Include="include\windows_common.h" />
+    <ClInclude Include="projectile.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="entity_bard.c" />
+    <ClCompile Include="projectile.c" />
     <ClCompile Include="src\camera.c" />
     <ClCompile Include="src\editor.c" />
     <ClCompile Include="src\entity_common.c" />
@@ -224,6 +227,7 @@
     <ClCompile Include="src\simple_json_string.c" />
     <ClCompile Include="src\simple_logger.c" />
     <ClCompile Include="src\spawn.c" />
+    <ClCompile Include="src\UI.c" />
     <ClCompile Include="src\windows_common.c" />
   </ItemGroup>
   <ItemGroup>

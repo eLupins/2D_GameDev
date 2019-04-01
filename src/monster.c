@@ -77,7 +77,7 @@ void monster_draw(Entity *self)
 
 void monster_think(Entity *self)
 {
-    
+    //shop menu interacton
 }
 
 void monster_update(Entity *self)

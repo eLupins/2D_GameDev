@@ -340,7 +340,7 @@ SDL_Scancode gf2d_input_key_to_scancode(const char * buffer)
     }
     else
     {
-        if (buffer[0] == 'F')
+        if (buffer[0] == 'f')
         {
             F = atoi(&buffer[1]);
             if (F <= 12)
