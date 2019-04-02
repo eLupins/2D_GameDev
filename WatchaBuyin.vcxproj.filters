@@ -370,5 +370,8 @@
     <None Include="rooms\testworld.json">
       <Filter>Config</Filter>
     </None>
+    <None Include="config\shop_window.json">
+      <Filter>Config</Filter>
+    </None>
   </ItemGroup>
 </Project>

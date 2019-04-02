@@ -69,6 +69,10 @@ int yes_no_update(Window *win,List *updateList)
     return 0;
 }
 
+//my insert//
+// Window *shop(char *text, void(*sell)(void*),
+
+
 Window *window_yes_no(char *text, void(*onYes)(void *),void(*onNo)(void *),void *yesData,void *noData)
 {
     Window *win;

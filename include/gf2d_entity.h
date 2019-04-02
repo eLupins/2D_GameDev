@@ -18,6 +18,7 @@ typedef enum
     ES_Pain,
     ES_Dying,
     ES_Dead         //Auto cleaned up
+
 }EntityState;
 
 #define EntitySoundMax 8
@@ -69,6 +70,7 @@ typedef struct Entity_S
     int   jumpcount;                        /**<used for multijump*/
     int   grounded;             
     void *data;                             /**<any other game specific data can be referenced here*/
+	int score;
 }Entity;
 
 /**

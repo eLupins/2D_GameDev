@@ -27,6 +27,7 @@ typedef struct
     float energy,energyMax;
     int capacitors,capacitorsMax;
     int attackType;
+	int score;
 	
 
 }PlayerData;
@@ -123,7 +124,7 @@ void player_draw(Entity *self)
 {
     //additional player drawings can go here
 }
-
+//INPUT HERE
 void player_think(Entity *self)
 {
     switch (self->state)

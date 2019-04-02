@@ -15,10 +15,19 @@
 #include "windows_common.h"
 #include "level_graph.h"
 #include "UI.h"
+#include "player.h"
 
-
+SDL_Color col = { 255, 255, 255, 0 };
 static int _done = 0;
 static Window *_quit = NULL;
+UIWindow *myCoins; // my score
+static TTF_Font *SourceSansPro;
+SDL_Texture *scoreTexture;
+SDL_Surface *scoreSurface;
+int scoreX = 70, scoreY = 30;
+int score = 0;
+SDL_Rect scoreRect = { 40, 50, 0, 0 };
+char scoreText[32];
 
 void onCancel(void *data)
 {
@@ -78,7 +87,29 @@ int main(int argc, char * argv[])
     
 	create_level("rooms/lvl1.txt"); //text file list of level .jsons
 
+	//////my ui system/////
+	UI_system_init(512);
+
    SDL_ShowCursor(SDL_DISABLE);
+   
+   //load my font from directory
+   TTF_Init();
+   SourceSansPro = TTF_OpenFont("fonts/SourceSansPro.ttf", 23);
+
+   if (!SourceSansPro) {
+	   slog("ERROR:Unable to load font!");
+   }
+
+   
+
+   snprintf(scoreText, 32, "%d", score);
+   scoreSurface = TTF_RenderText_Solid(SourceSansPro, scoreText, col);
+   scoreTexture = SDL_CreateTextureFromSurface(gf2d_graphics_get_renderer(), scoreSurface);
+   SDL_QueryTexture(scoreTexture, NULL, NULL, &scoreX, &scoreY);
+   scoreRect.w = scoreX;
+   scoreRect.h = scoreY;
+
+
     // game specific setup
     if (!editorMode)
     {
@@ -134,7 +165,16 @@ int main(int argc, char * argv[])
                 // Draw entities
             //UI elements last
             gf2d_windows_draw_all();
-			ui_draw_all();
+			score = player_get()->score;
+			snprintf(scoreText, 32, "%d", score);
+			scoreSurface = TTF_RenderText_Solid(SourceSansPro, scoreText, col, col);
+			scoreTexture = SDL_CreateTextureFromSurface(gf2d_graphics_get_renderer(), scoreSurface);
+			SDL_QueryTexture(scoreTexture, NULL, NULL, &scoreX, &scoreY);
+			scoreRect.w = scoreX;
+			scoreRect.h = scoreY;
+			SDL_RenderCopy(gf2d_graphics_get_renderer, scoreTexture, NULL, &scoreRect );
+			//SDL_BlitSurface(scoreSurface, NULL, gf2d_graphics_blit_surface_to_screen, NULL);
+		//	gf2d_graphics_blit_surface_to_screen(scoreSurface, &scoreRect, ); <-- keep workin on that
 
             if (editorMode)
             {

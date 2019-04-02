@@ -109,6 +109,10 @@ void pickup_think(Entity *self)
         // TODO: give item to player
         gf2d_sound_play(self->sound[0],0,1,-1,-1);
         self->dead = 1;
+		player_get()->score += 5; //add 5 points to player score
+		
+		slog("+5 points to player");
+		
         return;    
     }
 }

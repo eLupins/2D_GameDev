@@ -245,6 +245,7 @@
     <None Include="config\editor_main.json" />
     <None Include="config\font.cfg" />
     <None Include="config\input.cfg" />
+    <None Include="config\shop_window.json" />
     <None Include="config\testfile.json" />
     <None Include="config\testwindow.cfg" />
     <None Include="config\testwindow.min" />
