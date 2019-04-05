@@ -3,14 +3,8 @@
 #include "gf2d_graphics.h"
 #include "simple_logger.h"
 
-typedef struct
-{
-    TextLine filename;
-    TTF_Font *font;
-    Uint32  pointSize;
-}Font;
 
-typedef struct
+typedef struct font_m
 {
     Font *font_list;
     Font *font_tags[FT_MAX];
@@ -122,6 +116,10 @@ void gf2d_fonts_parse(FILE *file)
             {
                 font_manager.font_tags[FT_H6] = font;
             }
+			else if (strcmp(buf, "H7") == 0)
+			{
+				font_manager.font_tags[FT_H7] = font;
+			}
             continue;
         }
         fgets(buf, sizeof(buf), file);

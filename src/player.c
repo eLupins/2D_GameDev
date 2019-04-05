@@ -28,7 +28,6 @@ typedef struct
     int capacitors,capacitorsMax;
     int attackType;
 	int score;
-	
 
 }PlayerData;
 

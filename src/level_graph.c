@@ -110,8 +110,8 @@ void gen_new_node(char* filename) {
 
 void create_level(char* masterList) {
 
-	int maxRooms = 6;
-	int minRooms = 2;
+	int maxRooms = 9;
+	int minRooms = 5;
 	int i = 0;
 	char liveRooms[10][MAX_FILE_LENGTH];
 	int roomTypes = 0;

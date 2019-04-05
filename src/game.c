@@ -1,5 +1,6 @@
 #include <SDL.h>
 #include <stdio.h>
+#include <SDL_ttf.h>
 #include "gf2d_graphics.h"
 #include "gf2d_sprite.h"
 #include "gf2d_list.h"
@@ -16,18 +17,14 @@
 #include "level_graph.h"
 #include "UI.h"
 #include "player.h"
+#include "gf2d_text.h"
 
-SDL_Color col = { 255, 255, 255, 0 };
+//SDL_Color col = { 255, 255, 255, 0 };
+Color col;
 static int _done = 0;
 static Window *_quit = NULL;
-UIWindow *myCoins; // my score
-static TTF_Font *SourceSansPro;
-SDL_Texture *scoreTexture;
-SDL_Surface *scoreSurface;
-int scoreX = 70, scoreY = 30;
-int score = 0;
-SDL_Rect scoreRect = { 40, 50, 0, 0 };
 char scoreText[32];
+Vector2D pos = { 0,0 };
 
 void onCancel(void *data)
 {
@@ -48,7 +45,17 @@ int main(int argc, char * argv[])
     int fullscreen = 0;
 	SDL_Event e;
 	char jsonFileName[MAX_FILE_LENGTH] = "";
+	Font myFont; 
+	char* myScore = "Score: ";
+	col.r = 1;
+	col.g = 1;
+	col.b = 1;
+	col.a = 1;
+	col.ct = CT_RGBAf;
+	
+//	myFont.filename = "fonts/SourceSansPro.ttf";
 
+	
 
     /*parse args*/
     for (i = 1; i < argc; i++)
@@ -78,6 +85,7 @@ int main(int argc, char * argv[])
     gf2d_audio_init(256,16,4,1,1,1);
     gf2d_sprite_init(1024);
     gf2d_action_list_init(128);
+	gf2d_text_init(1024); //probably overkill but oh well
     gf2d_text_init("config/font.cfg");
     gf2d_input_init("config/input.cfg");
     gf2d_windows_init(128);
@@ -93,21 +101,7 @@ int main(int argc, char * argv[])
    SDL_ShowCursor(SDL_DISABLE);
    
    //load my font from directory
-   TTF_Init();
-   SourceSansPro = TTF_OpenFont("fonts/SourceSansPro.ttf", 23);
-
-   if (!SourceSansPro) {
-	   slog("ERROR:Unable to load font!");
-   }
-
-   
-
-   snprintf(scoreText, 32, "%d", score);
-   scoreSurface = TTF_RenderText_Solid(SourceSansPro, scoreText, col);
-   scoreTexture = SDL_CreateTextureFromSurface(gf2d_graphics_get_renderer(), scoreSurface);
-   SDL_QueryTexture(scoreTexture, NULL, NULL, &scoreX, &scoreY);
-   scoreRect.w = scoreX;
-   scoreRect.h = scoreY;
+  // snprintf(scoreText, 32, "%d", score);
 
 
     // game specific setup
@@ -162,19 +156,14 @@ int main(int argc, char * argv[])
                     gf2d_entity_update_all();
 					ui_update_all();
                 }
+
+				//myFont.font = gf2d_fonts_load("fonts/SourceSansPro.ttf");
+				gf2d_fonts_load(FT_H7);
+				gf2d_font_getBounds(myScore, FT_H7);
+				gf2d_text_draw_line(myScore, FT_H7, col, pos);
+
+
                 // Draw entities
-            //UI elements last
-            gf2d_windows_draw_all();
-			score = player_get()->score;
-			snprintf(scoreText, 32, "%d", score);
-			scoreSurface = TTF_RenderText_Solid(SourceSansPro, scoreText, col, col);
-			scoreTexture = SDL_CreateTextureFromSurface(gf2d_graphics_get_renderer(), scoreSurface);
-			SDL_QueryTexture(scoreTexture, NULL, NULL, &scoreX, &scoreY);
-			scoreRect.w = scoreX;
-			scoreRect.h = scoreY;
-			SDL_RenderCopy(gf2d_graphics_get_renderer, scoreTexture, NULL, &scoreRect );
-			//SDL_BlitSurface(scoreSurface, NULL, gf2d_graphics_blit_surface_to_screen, NULL);
-		//	gf2d_graphics_blit_surface_to_screen(scoreSurface, &scoreRect, ); <-- keep workin on that
 
             if (editorMode)
             {
@@ -189,7 +178,6 @@ int main(int argc, char * argv[])
    //     slog("Rendering at %f FPS",gf2d_graphics_get_frames_per_second());
     }
     level_info_free(linfo);
-    
     level_clear();
     slog("---==== END ====---");
     return 0;

@@ -69,9 +69,19 @@ typedef enum
     FT_H4,
     FT_H5,
     FT_H6,
+	FT_H7,
     FT_MAX
+
 }FontTypes;
 
+
+typedef struct font
+{
+	TextLine filename;
+	TTF_Font *font;
+	Uint32  pointSize;
+
+}Font;
 /**
  * @brief initialized text drawing system
  * @param configFile the file to load font information from
