@@ -99,6 +99,7 @@ LevelInfo *level_info_create(
 	gf2d_line_cpy(linfo->Pillar, Pillar);
     vector2d_copy(linfo->tileSize,tileSize);
     vector2d_copy(linfo->tileMapSize,tileMapSize);
+
     linfo->tileMap = level_alloc_tilemap(tileMapSize.x,tileMapSize.y);
     return linfo;
 }
@@ -123,7 +124,7 @@ int *level_alloc_tilemap(int w,int h)
 
 void level_info_tilemap_load(LevelInfo *linfo, SJson *tilemap,Uint32 w,Uint32 h)
 {
-    int i,j;
+    int i,j,v = 0;
     SJson *row,*value;
     if ((!linfo)||(!tilemap))
     {
@@ -135,12 +136,15 @@ void level_info_tilemap_load(LevelInfo *linfo, SJson *tilemap,Uint32 w,Uint32 h)
     {
         return;
     }
+
     for (j = 0; j < h;j++)
     {
         row = sj_array_get_nth(tilemap,j);
         for (i = 0;i < w;i++)
         {
             value = sj_array_get_nth(row,i);
+			sj_get_integer_value(value, &v);
+			//slog("tilemap: value at i (%i) j (%i) is (%i)", i, j, v);
             sj_get_integer_value(value,&linfo->tileMap[j*w+i]);
         }
     }
@@ -193,7 +197,6 @@ LevelInfo *level_info_load(char *filename)
     slog("loaded tile size of %f,%f",linfo->tileMapSize.x,linfo->tileMapSize.y);
     
     level_info_tilemap_load(linfo, sj_object_get_value(world,"tileMap"),(Uint32)linfo->tileMapSize.x,(Uint32)linfo->tileMapSize.y);
-
     sj_value_as_vector2d(sj_object_get_value(world,"tileSize"),&linfo->tileSize);
     
     linfo->spawnList = sj_copy(sj_object_get_value(world,"spawnList"));
@@ -271,6 +274,16 @@ void level_make_tile_layer(LevelInfo *linfo)
 			case 3:
 				gf2d_sprite_draw_to_surface(
 					gamelevel.bottomWall,
+					vector2d(i*linfo->tileSize.x, j*linfo->tileSize.y),
+					NULL,
+					NULL,
+					linfo->tileMap[j*(Uint32)linfo->tileMapSize.x + i] - 1,
+					sprite->surface);
+				break;
+
+			case 4:
+				gf2d_sprite_draw_to_surface(
+					gamelevel.rWall,
 					vector2d(i*linfo->tileSize.x, j*linfo->tileSize.y),
 					NULL,
 					NULL,
@@ -416,12 +429,14 @@ void level_init(LevelInfo *linfo,Uint8 space)
 		linfo->tileSize.y,
 		1,
 		true);
+
 	gamelevel.bottomWall = gf2d_sprite_load_all(
 		linfo->bottomWall,
 		linfo->tileSize.x,
 		linfo->tileSize.y,
 		1,
 		true);
+
 	gamelevel.rWall = gf2d_sprite_load_all(
 		linfo->rWall,
 		linfo->tileSize.x,

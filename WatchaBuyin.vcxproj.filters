@@ -162,6 +162,9 @@
     <ClInclude Include="include\UI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\SDL_FontCache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\camera.c">
@@ -302,6 +305,9 @@
     <ClCompile Include="src\UI.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\SDL_FontCache.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Makefile">
@@ -320,9 +326,6 @@
       <Filter>Config</Filter>
     </None>
     <None Include="config\testwindow.cfg">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="config\testwindow.min">
       <Filter>Config</Filter>
     </None>
     <None Include="config\text_entry_window.json">

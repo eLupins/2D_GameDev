@@ -22,4 +22,6 @@ void gf2d_draw_rect(SDL_Rect rect,Vector4D color);
  */
 void gf2d_draw_line(Vector2D p1,Vector2D p2, Vector4D color);
 
+void gf2d_draw_solid_rect(SDL_Rect rect, Vector4D color);
+
 #endif

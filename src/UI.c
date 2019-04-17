@@ -1,155 +1,126 @@
 #include "UI.h"
-#include "gf2d_graphics.h"
+#include "gf2d_shape.h"
 #include "gf2d_draw.h"
+#include "gf2d_text.h"
+#include "gf2d_sprite.h"
+#include "player.h"
+#include "gf2d_entity.h"
+#include "simple_logger.h"
+#include "SDL_FontCache.h"
+#include "gf2d_graphics.h"
+//#include <SDL_ttf.h>
 
-typedef struct uimanager_s {
+typedef struct
+{
+	Sprite *hud;
+	float   healthPercent;
+	float   energyPercent;
+	float   opponentPercent;
+	int     score;
+	float   alert;
 
-	Uint32 Max_UI;
-	UIWindow *list;
-	Uint64 increment;
+}GUI;
 
-}UI_Manager;
+static GUI gui = { 0 };
 
-
-static UI_Manager ui_manager = { 0 , NULL};
-
-void ui_system_close() {
-
+void gui_close_hud()
+{
+	gf2d_sprite_free(gui.hud);
 }
 
-void UI_system_init(int MaxUI) { // do later
-
-	if (!MaxUI) {
-		slog("ERROR: Cannot initialize a UI system for no UI");
-		return;
-	}
+void gui_setup_hud()
+{
+	memset(&gui, 0, sizeof(GUI));
+	gui.hud = gf2d_sprite_load_image("images/ui/coin.png");
+	atexit(gui_close_hud);
 }
 
-
-UIWindow *new_window() {
-
-	int i = 0;
-	
-	for (i = 0; i < ui_manager.Max_UI; i++){
-		if (ui_manager.list[i].inUse == 0) {
-
-			memset(&ui_manager.list[i], 0, sizeof(UIWindow));
-			ui_manager.list[i].id = ui_manager.increment++;
-			ui_manager.list[i].inUse = 1;
-			vector2d_set(ui_manager.list[i].scale, 1, 1);
-			ui_manager.list[i].color = vector4d(1, 1, 1, 1); //no color shift; opaque
-			return &ui_manager.list[i];
-		}
+void gui_draw_percent_bar_horizontal(Rect rect, float percent, Vector4D fgColor, Vector4D bgColor, int left)
+{
+	SDL_Rect r;
+	r = gf2d_rect_to_sdl_rect(rect);
+	gf2d_draw_solid_rect(r, bgColor);
+	if (left)
+	{
+		r = gf2d_rect_to_sdl_rect(gf2d_rect(rect.x, rect.y, (float)rect.w*percent, rect.h));
 	}
-}
-
-void free_ui(UIWindow *self) {
-
-	int i = 0 ;
-
-	if (!self)
-		return;
-
-	if (self->free)
-		self->free(self);
-
-	/** Memset before you free; good programming practice **/
-	memset(self, 0, sizeof(UIWindow));
-	free(self);
-
-}
-
-void free_all_ui() {
-
-	int i = 0;
-
-	for (i = 0; i < ui_manager.Max_UI; i++) {
-		
-		free_ui(&ui_manager.list[i]);
-
-	}
-}
-
-void ui_draw(UIWindow *self) {
-
-	if (!self) {
-		slog("ERROR: Cannot draw 0 UI");
-		return;
-	}
-
-	if (!self->inUse) {
-		slog("ERROR: Cannot draw a UI thats not in use");
-		return;
-	}
-
-	if (!(&self->window)) {
-		slog("ERROR: Cannot draw a window that doesn't exist!");
-		return;
-	}
-
-	if (self->sprite)
-		gf2d_sprite_draw_image(self->sprite, self->pos);
 	else
-		gf2d_draw_rect(self->window, self->color);
-
-	if (self->texture != NULL) {
-
-		SDL_RenderCopy(gf2d_graphics_get_renderer(), self->texture, NULL, &self->window);
-
+	{
+		r = gf2d_rect_to_sdl_rect(gf2d_rect(rect.x + (1 - percent)*rect.w, rect.y, (float)rect.w*percent, rect.h));
 	}
+	gf2d_draw_solid_rect(r, fgColor);
 }
 
-void ui_draw_all() {
-
-	int i = 0;
-
-	for (i = 0; i < ui_manager.Max_UI; i++) {
-		if (ui_manager.list[i].inUse) {
-
-			ui_draw(&ui_manager.list[i]);
-
-		}
+void gui_draw_percent_bar_vertical(Rect rect, float percent, Vector4D fgColor, Vector4D bgColor, int top)
+{
+	SDL_Rect r;
+	r = gf2d_rect_to_sdl_rect(rect);
+	gf2d_draw_solid_rect(r, bgColor);
+	if (top)
+	{
+		r = gf2d_rect_to_sdl_rect(gf2d_rect(rect.x, rect.y + (1 - percent)*rect.h, rect.w, rect.h*percent));
 	}
+	else
+	{
+		r = gf2d_rect_to_sdl_rect(gf2d_rect(rect.x, rect.y, rect.w, rect.h*percent));
+	}
+	gf2d_draw_solid_rect(r, fgColor);
 }
 
-void ui_update(UIWindow *self) {
-
-	if (!self) {
-		slog("ERROR: Cannot update a UI that doesn't exist!");
-		return;
+void gui_draw_hud()
+{
+	Vector4D color = { 255,255,255,255 };
+	if (gui.healthPercent < 0.2)
+	{
+		gui.alert = (gui.alert + 0.02);
+		if (gui.alert >= M_PI)gui.alert = 0;
+		color.y = color.z = sin(gui.alert) * 255;
 	}
-
-	self->window.x = self->pos.x;
-	self->window.y = self->pos.y;
-
+	gf2d_sprite_draw(
+		gui.hud, vector2d(0, 0),
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		&color,
+		0);
+	gui_set_score();
+	//gui_get_score(gf2d_rect(10,10,145,10), gui.score, vector4d((1 - gui.score) * 255, gui.score * 255, 0, 255), vector4d(128, 0, 0, 128), 1);
+	//gui_draw_percent_bar_horizontal(gf2d_rect(40, 40, 145, 10), gui.healthPercent, vector4d((1 - gui.healthPercent) * 255, gui.healthPercent * 255, 0, 255), vector4d(128, 0, 0, 128), 1);
+	//gui_draw_percent_bar_horizontal(gf2d_rect(10, 20, 145, 10), gui.energyPercent, vector4d(0, 255, 255, 255), vector4d(0, 64, 64, 255), 1);
+	//gui_draw_percent_bar_horizontal(gf2d_rect(1045, 10, 145, 10), gui.opponentPercent, vector4d(255, 0, 64, 255), vector4d(64, 0, 32, 255), 0);
 }
 
-void ui_update_all() {
-
-	int i = 0;
-
-	for (i = 0; i < ui_manager.Max_UI; i++) {
-		if (ui_manager.list[i].inUse) {
-
-			ui_update(&ui_manager.list[i]);
-
-		}
-	}
+void gui_set_health(float health)
+{
+	gui.healthPercent = health;
 }
 
-void ui_change_text(UIWindow *self, char *text, Uint32 wraplength) {
-
-	if (!self) {
-		slog("ERROR: Cannot change text for a window that doesn't exist!");
-		return;
-	}
-
-	strncpy(self->text, text, TEXT_LENGTH);
-
-	self->surface = TTF_RenderText_Blended_Wrapped(self->font, text, self->textcolor, wraplength); //create ttf text
-	self->texture = SDL_CreateTextureFromSurface(gf2d_graphics_get_renderer(), self->surface);
-	SDL_QueryTexture(self->texture, NULL, NULL, &self->rectW, &self->rectH); //query texture for rendering 
-	self->window.h = self->rectH;
-	self->window.w = self->rectW;
-
+void gui_set_energy(float energy)
+{
+	gui.energyPercent = energy;
 }
+
+void gui_set_opponent_health(float health)
+{
+	gui.opponentPercent = health;
+}
+
+void gui_set_score() {
+
+	int score = player_get()->score;
+	//SDL_Surface scoreSurf = TTF_RenderText_SOlid
+	//SDL_Renderer *renderer = NULL;
+	//renderer = SDL_CreateRenderer(
+	FC_Font* font = FC_CreateFont();
+	FC_LoadFont(font, gf2d_graphics_get_renderer(), "fonts/CELTG___.TTF", 20, FC_MakeColor(253, 250, 103, 255), TTF_STYLE_NORMAL);
+	FC_Draw(font, gf2d_graphics_get_renderer(), 30, 30, "Gold: %i", score);
+	FC_FreeFont(font);
+	//SDL_Surface scoreSurf = TTF_RenderText_Solid("
+
+	//printf("%i", score); <-- for debugging
+	//slog(score);
+}
+
+
+/*eol@eof*/

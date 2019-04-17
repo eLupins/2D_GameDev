@@ -24,7 +24,7 @@ Color col;
 static int _done = 0;
 static Window *_quit = NULL;
 char scoreText[32];
-Vector2D pos = { 0,0 };
+Vector2D pos = { 50,-25 };
 
 void onCancel(void *data)
 {
@@ -45,7 +45,8 @@ int main(int argc, char * argv[])
     int fullscreen = 0;
 	SDL_Event e;
 	char jsonFileName[MAX_FILE_LENGTH] = "";
-	Font myFont; 
+	Sprite *poop = NULL;
+	//Font myFont; 
 	char* myScore = "Score: ";
 	col.r = 1;
 	col.g = 1;
@@ -54,8 +55,6 @@ int main(int argc, char * argv[])
 	col.ct = CT_RGBAf;
 	
 //	myFont.filename = "fonts/SourceSansPro.ttf";
-
-	
 
     /*parse args*/
     for (i = 1; i < argc; i++)
@@ -85,18 +84,20 @@ int main(int argc, char * argv[])
     gf2d_audio_init(256,16,4,1,1,1);
     gf2d_sprite_init(1024);
     gf2d_action_list_init(128);
-	gf2d_text_init(1024); //probably overkill but oh well
+//	gf2d_text_init(); //probably overkill but oh well
     gf2d_text_init("config/font.cfg");
     gf2d_input_init("config/input.cfg");
     gf2d_windows_init(128);
     gf2d_entity_system_init(1024);
-    
+	//poop = gf2d_sprite_load_image("images/backgrounds/bot.png");
+	
+
     camera_set_dimensions(0,0,1200,700);
     
 	create_level("rooms/lvl1.txt"); //text file list of level .jsons
 
 	//////my ui system/////
-	UI_system_init(512);
+	//UI_system_init(512);
 
    SDL_ShowCursor(SDL_DISABLE);
    
@@ -151,17 +152,19 @@ int main(int argc, char * argv[])
             //backgrounds drawn first
                 // DRAW WORLD
                 level_draw();
+				gui_draw_hud();
+
+
+				//gui_set_energy(2.0f); <-- might need this for health later
+
                 if (!editorMode)
                 {
                     gf2d_entity_update_all();
-					ui_update_all();
+					//ui_update_all();
                 }
 
-				//myFont.font = gf2d_fonts_load("fonts/SourceSansPro.ttf");
-				gf2d_fonts_load(FT_H7);
-				gf2d_font_getBounds(myScore, FT_H7);
-				gf2d_text_draw_line(myScore, FT_H7, col, pos);
-
+				//gf2d_fonts_load("fonts/SourceSansPro.ttf");
+			
 
                 // Draw entities
 
