@@ -58,7 +58,7 @@ Entity *pickup_new(Vector2D position,const char *name, char *actorFile)
     gf2d_actor_load(&self->actor,actorFile);
     gf2d_actor_set_action(&self->actor,"idle");
     
-    self->sound[0] = gf2d_sound_load("sounds/essence.wav",1,-1);
+    self->sound[0] = gf2d_sound_load("music/coin.wav",1,-1);
     
     vector2d_copy(self->position,position);
     

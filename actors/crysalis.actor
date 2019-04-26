@@ -1,4 +1,4 @@
-sprite: images/crysalis.png
+sprite: images/ui/coin.png
 frameWidth: 64
 frameHeight: 64
 framesPerLine: 16

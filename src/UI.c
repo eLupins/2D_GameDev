@@ -109,18 +109,11 @@ void gui_set_opponent_health(float health)
 void gui_set_score() {
 
 	int score = player_get()->score;
-	//SDL_Surface scoreSurf = TTF_RenderText_SOlid
-	//SDL_Renderer *renderer = NULL;
-	//renderer = SDL_CreateRenderer(
 	FC_Font* font = FC_CreateFont();
 	FC_LoadFont(font, gf2d_graphics_get_renderer(), "fonts/CELTG___.TTF", 20, FC_MakeColor(253, 250, 103, 255), TTF_STYLE_NORMAL);
 	FC_Draw(font, gf2d_graphics_get_renderer(), 30, 30, "Gold: %i", score);
 	FC_FreeFont(font);
-	//SDL_Surface scoreSurf = TTF_RenderText_Solid("
-
-	//printf("%i", score); <-- for debugging
-	//slog(score);
+	
 }
-
 
 /*eol@eof*/

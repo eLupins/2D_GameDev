@@ -140,7 +140,8 @@ void player_think(Entity *self)
             if (gf2d_input_command_down("walkright"))
             {
                 self->flip.x = 0;
-                if (!entity_right_check(self,1))
+                if (!entity_right_check(self,1
+				))
                 {
                     self->velocity.x += 1.25;
                 }
