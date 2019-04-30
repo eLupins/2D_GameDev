@@ -376,5 +376,8 @@
     <None Include="config\shop_window.json">
       <Filter>Config</Filter>
     </None>
+    <None Include="actors\potion.actor">
+      <Filter>actors</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -242,6 +242,7 @@
     <None Include="actors\mouse.actor" />
     <None Include="actors\new_icon.actor" />
     <None Include="actors\player.actor" />
+    <None Include="actors\potion.actor" />
     <None Include="actors\save_icon.actor" />
     <None Include="actors\space_bug.actor" />
     <None Include="config\editor_main.json" />

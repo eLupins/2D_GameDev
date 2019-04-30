@@ -126,6 +126,7 @@ void player_draw(Entity *self)
 //INPUT HERE
 void player_think(Entity *self)
 {
+	Entity *proj = NULL;
     switch (self->state)
     {
         case ES_Idle:
@@ -168,6 +169,8 @@ void player_think(Entity *self)
                 self->cooldown = gf2d_actor_get_frames_remaining(&self->actor);
                 slog("cooldown set to %i",self->cooldown);
                 self->state = ES_Attacking;
+			
+				
             }
             break;
         default:

@@ -331,7 +331,7 @@ void gf2d_sprite_draw(
         position.y - (scaleFactor.y * scaleOffset.y),
         sprite->frame_w * scaleFactor.x,
         sprite->frame_h * scaleFactor.y);
-    SDL_RenderCopyEx(gf2d_graphics_get_renderer(),
+w    SDL_RenderCopyEx(gf2d_graphics_get_renderer(),
                      sprite->texture,
                      &cell,
                      &target,

@@ -161,6 +161,7 @@ int main(int argc, char * argv[])
                 {
                     gf2d_entity_update_all();
 					//ui_update_all();
+					//ui_update_all();
                 }
 
 				//gf2d_fonts_load("fonts/SourceSansPro.ttf");
