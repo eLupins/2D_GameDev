@@ -89,6 +89,7 @@ int main(int argc, char * argv[])
     gf2d_input_init("config/input.cfg");
     gf2d_windows_init(128);
     gf2d_entity_system_init(1024);
+	
 	//poop = gf2d_sprite_load_image("images/backgrounds/bot.png");
 	
 
@@ -101,8 +102,6 @@ int main(int argc, char * argv[])
 
    SDL_ShowCursor(SDL_DISABLE);
    
-   //load my font from directory
-  // snprintf(scoreText, 32, "%d", score);
 
 
     // game specific setup

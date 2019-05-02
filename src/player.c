@@ -5,6 +5,7 @@
 #include "gf2d_input.h"
 #include "entity_common.h"
 #include "level_graph.h"
+#include "projectile.h"
 
 static Entity *_player = NULL;
 static Entity * projectile = NULL;
@@ -165,10 +166,11 @@ void player_think(Entity *self)
             }
             if (gf2d_input_command_released("melee"))
             {
-                gf2d_actor_set_action(&self->actor,"hack");
-                self->cooldown = gf2d_actor_get_frames_remaining(&self->actor);
+              //  gf2d_actor_set_action(&self->actor,"hack");
+              //  self->cooldown = gf2d_actor_get_frames_remaining(&self->actor);
+				projectile_spawn(_player->position, "actors/potion.actor");
                 slog("cooldown set to %i",self->cooldown);
-                self->state = ES_Attacking;
+             //   self->state = ES_Attacking;
 			
 				
             }
