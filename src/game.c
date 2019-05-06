@@ -18,6 +18,7 @@
 #include "UI.h"
 #include "player.h"
 #include "gf2d_text.h"
+#include "projectile.h"
 
 //SDL_Color col = { 255, 255, 255, 0 };
 Color col;
@@ -25,6 +26,7 @@ static int _done = 0;
 static Window *_quit = NULL;
 char scoreText[32];
 Vector2D pos = { 50,-25 };
+ParticleEmitter *pe;
 
 void onCancel(void *data)
 {
@@ -90,6 +92,7 @@ int main(int argc, char * argv[])
     gf2d_windows_init(128);
     gf2d_entity_system_init(1024);
 	
+	
 	//poop = gf2d_sprite_load_image("images/backgrounds/bot.png");
 	
 
@@ -145,7 +148,8 @@ int main(int argc, char * argv[])
         {
             gf2d_mouse_update();
         }
-        
+		gf2d_particle_emitter_update(pe);
+		gf2d_particle_emitter_draw(pe);
         gf2d_graphics_clear_screen();// clears drawing buffers
         // all drawing should happen betweem clear_screen and next_frame
             //backgrounds drawn first

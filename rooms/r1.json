@@ -57,7 +57,7 @@
 				"name": "pickup_start",
 				"position": [ 700, 128 ],
 				"args": {
-					"item": "crysalis"
+					"item": "essence"
 				}
 			}
 		]

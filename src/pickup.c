@@ -97,8 +97,7 @@ void pickup_think(Entity *self)
     if (c.collided)
     {
         if ((!c.body)||(!c.body->data))
-        {
-            return;
+        {            return;
         }
         other = (Entity *)c.body->data;
         if (other != player_get())

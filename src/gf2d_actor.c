@@ -241,7 +241,7 @@ ActionList *gf2d_action_list_load(
     if (!file)
     {
         gf2d_action_list_delete(actionList);
-        slog("failed to open action file: %s",filename);
+    //    slog("failed to open action file: %s",filename);
         return NULL;
     }
     gf2d_line_cpy(actionList->filename,filename);
@@ -250,7 +250,7 @@ ActionList *gf2d_action_list_load(
     {
         gf2d_action_list_delete(actionList);
         fclose(file);
-        slog("No actions found in file: %s",filename);
+      //  slog("No actions found in file: %s",filename);
         return NULL;
     }
     actionList->actions = (Action*)malloc(sizeof(Action)*count);
@@ -267,12 +267,12 @@ Action *gf2d_action_list_get_action(ActionList *al, char *name)
     int i;
     if (!al)
     {
-        slog("no action list provided");
+     //   slog("no action list provided");
         return NULL;
     }
     if (!name)
     {
-        slog("no filename provided");
+      //  slog("no filename provided");
         return NULL;
     }
     for (i = 0; i < al->numActions;i++)
@@ -291,7 +291,7 @@ float gf2d_action_set(ActionList *al,char *name)
     action = gf2d_action_list_get_action(al, name);
     if (!action)
     {
-        slog("no action found by name %s",name);
+      //  slog("no action found by name %s",name);
         return ART_ERROR;
     }
     return action->startFrame;
@@ -311,7 +311,7 @@ ActionReturnType gf2d_action_list_get_next_frame(
     action = gf2d_action_list_get_action(al, name);
     if (!action)
     {
-        slog("no action found by name %s",name);
+     //   slog("no action found by name %s",name);
         return ART_ERROR;
     }
     *frame += action->frameRate;
@@ -416,7 +416,7 @@ int gf2d_actor_get_frames_remaining(Actor *actor)
     action = gf2d_action_list_get_action(actor->al, actor->action);
     if (!action)
     {
-        slog("no action names %s",actor->action);
+     //   slog("no action names %s",actor->action);
         return 0;
     }
     if (action->frameRate == 0)
