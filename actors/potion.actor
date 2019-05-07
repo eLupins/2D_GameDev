@@ -1,0 +1,13 @@
+sprite: images/potion.png
+frameWidth: 32
+frameHeight: 32
+framesPerLine: 64
+scale: 0.7, 0.7
+color: 255,255,255,255
+colorSpecial: 10,255,100,255
+
+action: idle
+startFrame: 0
+endFrame: 0
+frameRate: 1
+type:   loop
