@@ -34,3 +34,5 @@
 
 myVulkan/libs/
 myVulkan/myVulkan/.vs
+
+*.log
