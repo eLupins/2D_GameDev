@@ -18,6 +18,7 @@ typedef struct
 	float   opponentPercent;
 	int     score;
 	float   alert;
+	int lvl;
 
 }GUI;
 
@@ -109,9 +110,13 @@ void gui_set_opponent_health(float health)
 void gui_set_score() {
 
 	int score = player_get()->score;
+	int playerlvl = player_get()->playerlvl;
+	int playerhealth = player_get()->maxHealth;
 	FC_Font* font = FC_CreateFont();
 	FC_LoadFont(font, gf2d_graphics_get_renderer(), "fonts/CELTG___.TTF", 20, FC_MakeColor(253, 250, 103, 255), TTF_STYLE_NORMAL);
-	FC_Draw(font, gf2d_graphics_get_renderer(), 30, 30, "Gold: %i", score);
+	FC_Draw(font, gf2d_graphics_get_renderer(), 30, 30, "Health: %i", playerhealth);
+	FC_Draw(font, gf2d_graphics_get_renderer(), 30, 60, "Gold: %i", score);
+	FC_Draw(font, gf2d_graphics_get_renderer(), 30, 90, "Level: %i", playerlvl);
 	FC_FreeFont(font);
 	
 }

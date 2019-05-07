@@ -29,6 +29,7 @@ typedef struct
     int capacitors,capacitorsMax;
     int attackType;
 	int score;
+	int playerlvl;
 
 }PlayerData;
 
@@ -75,7 +76,6 @@ Entity *player_new(Vector2D position)
     
     gf2d_line_cpy(self->name,"player");
     self->parent = NULL;
-    
     self->shape = gf2d_shape_rect(-16, -16, 30, 60);
     gf2d_body_set(
         &self->body,
@@ -92,7 +92,7 @@ Entity *player_new(Vector2D position)
         self,
         NULL,
         NULL);
-
+	self->maxHealth = 4;
     gf2d_actor_load(&self->actor,"actors/player.actor");
     gf2d_actor_set_action(&self->actor,"idle");
 
@@ -125,9 +125,46 @@ void player_draw(Entity *self)
     //additional player drawings can go here
 }
 //INPUT HERE
+
+void on_level_up() {
+
+	if (player_get()->score / 20 > player_get()->playerlvl) {
+		player_get()->playerlvl += 1;
+		player_get()->maxHealth += 1;
+	}
+	/*
+	if (player_get()->score == 20) {
+		player_get()->playerlvl = 1;
+		player_get()->maxHealth += 1;
+	}
+	if (player_get()->score == 40) {
+		player_get()->playerlvl = 2;
+		player_get()->maxHealth += 1;
+	}
+
+	if (player_get()->score == 60) {
+		player_get()->playerlvl = 3;
+		player_get()->maxHealth += 1;
+	}
+
+	if (player_get()->score == 80) {
+		player_get()->playerlvl = 4;
+		player_get()->maxHealth += 1;
+	}
+
+
+	if (player_get()->score == 100) {
+		player_get()->playerlvl = 5;
+		player_get()->maxHealth += 1;
+	}
+	*/
+}
 void player_think(Entity *self)
 {
 	Entity *proj = NULL;
+	
+	on_level_up();
+
     switch (self->state)
     {
         case ES_Idle:
@@ -182,7 +219,7 @@ void player_think(Entity *self)
 
 void player_update(Entity *self)
 {
-
+	
     Vector2D camPosition = {0,0};
     if (!self)return;
     

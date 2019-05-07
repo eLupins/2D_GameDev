@@ -71,6 +71,7 @@ typedef struct Entity_S
     int   grounded;             
     void *data;                             /**<any other game specific data can be referenced here*/
 	int score;
+	int playerlvl;
 
 }Entity;
 

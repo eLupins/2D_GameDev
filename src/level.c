@@ -181,12 +181,6 @@ LevelInfo *level_info_load(char *filename)
     gf2d_line_cpy(linfo->tileSet,sj_get_string_value(sj_object_get_value(world,"tileSet")));
 
 
-	///My sprite tiles 
-	//if (linfo->topWall != NULL)
-	//{
-	//	free(linfo->topWall);
-	//}
-	//linfo->topWall = (char *)malloc(sizeof(char) * 128);
 	gf2d_line_cpy(linfo->topWall, sj_get_string_value(sj_object_get_value(world, "topWall")));
 	gf2d_line_cpy(linfo->bottomWall, sj_get_string_value(sj_object_get_value(world, "bottomWall")));
 	gf2d_line_cpy(linfo->rWall, sj_get_string_value(sj_object_get_value(world, "rWall")));

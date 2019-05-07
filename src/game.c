@@ -178,10 +178,15 @@ int main(int argc, char * argv[])
             }
         gf2d_grahics_next_frame();// render current draw frame and skip to the next frame
         
-        if ((gf2d_input_command_down("exit"))&&(_quit == NULL))
+        if ((gf2d_input_key_down("exit"))&&(_quit == NULL))
         {
             _quit = window_yes_no("Exit?",onExit,onCancel,NULL,NULL);
         }
+
+		//for opening editor
+		if ((gf2d_input_key_down("exit")) && gf2d_input_key_down("melee")) {
+			
+		}
    //     slog("Rendering at %f FPS",gf2d_graphics_get_frames_per_second());
     }
     level_info_free(linfo);

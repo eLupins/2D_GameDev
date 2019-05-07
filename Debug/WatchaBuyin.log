@@ -1,8 +1,2 @@
-﻿  projectile.c
-d:\2d\2dproj\watchabuyin\watchabuyin\src\projectile.c(64): warning C4133: 'function': incompatible types - from 'Sprite *' to 'SDL_Texture *'
-d:\2d\2dproj\watchabuyin\watchabuyin\src\projectile.c(151): warning C4305: '-=': truncation from 'double' to 'float'
-d:\2d\2dproj\watchabuyin\watchabuyin\src\projectile.c(190): warning C4305: 'function': truncation from 'double' to 'float'
-d:\2d\2dproj\watchabuyin\watchabuyin\src\projectile.c(191): warning C4305: 'function': truncation from 'double' to 'float'
-d:\2d\2dproj\watchabuyin\watchabuyin\src\projectile.c(192): warning C4305: 'function': truncation from 'double' to 'float'
-d:\2d\2dproj\watchabuyin\watchabuyin\src\projectile.c(277): warning C4026: function declared with formal parameter list
+﻿  game.c
   WatchaBuyin.vcxproj -> D:\2D\2DProj\WatchaBuyin\WatchaBuyin\WatchaBuyin.exe

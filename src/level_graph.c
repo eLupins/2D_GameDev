@@ -94,7 +94,7 @@ void gen_new_node(char* filename) {
 				node_manager.currentRoom = node;
 				done = 1;
 			}
-			break;
+			break;	
 
 		default:
 			if (node_manager.currentRoom->left == NULL) {
