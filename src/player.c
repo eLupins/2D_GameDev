@@ -11,6 +11,7 @@ static Entity *_player = NULL;
 static Entity * projectile = NULL;
 static int projectileCount = 0;
 
+
 void player_draw(Entity *self);
 void player_think(Entity *self);
 void player_update(Entity *self);
@@ -127,37 +128,16 @@ void player_draw(Entity *self)
 //INPUT HERE
 
 void on_level_up() {
-
+	
+	//every time the player earns 20 coins, level up
 	if (player_get()->score / 20 > player_get()->playerlvl) {
 		player_get()->playerlvl += 1;
 		player_get()->maxHealth += 1;
-	}
-	/*
-	if (player_get()->score == 20) {
-		player_get()->playerlvl = 1;
-		player_get()->maxHealth += 1;
-	}
-	if (player_get()->score == 40) {
-		player_get()->playerlvl = 2;
-		player_get()->maxHealth += 1;
+		player_get()->velocity.x += 1.5;
+		player_get()->velocity.y += 1.5;
+		//player_get()->velocity += speedIncrease;
 	}
 
-	if (player_get()->score == 60) {
-		player_get()->playerlvl = 3;
-		player_get()->maxHealth += 1;
-	}
-
-	if (player_get()->score == 80) {
-		player_get()->playerlvl = 4;
-		player_get()->maxHealth += 1;
-	}
-
-
-	if (player_get()->score == 100) {
-		player_get()->playerlvl = 5;
-		player_get()->maxHealth += 1;
-	}
-	*/
 }
 void player_think(Entity *self)
 {

@@ -1,62 +1,6 @@
-﻿  SDL_FontCache.c
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(234): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(615): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(616): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(617): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(618): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(620): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(632): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(634): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(638): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(641): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(644): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(646): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(650): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(653): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(703): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(704): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(705): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(706): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(1665): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(1659): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(1942): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(1955): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(1987): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(2018): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(2049): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(2080): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(2121): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(2109): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(2150): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(2126): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(2167): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(2155): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(2184): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(2172): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(2213): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(2189): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(2218): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(2251): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(2653): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(2654): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(2646): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\sdl_fontcache.c(2703): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
-  UI.c
-d:\2d\2dproj\watchabuyin\watchabuyin\src\ui.c(36): warning C4113: 'void (__cdecl *)()' differs in parameter lists from 'void (__cdecl *)(void)'
-d:\2d\2dproj\watchabuyin\watchabuyin\src\ui.c(76): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  entity_bard.c
-  game.c
-  player.c
-d:\2d\2dproj\watchabuyin\watchabuyin\src\player.c(37): warning C4305: 'initializing': truncation from 'double' to 'float'
-d:\2d\2dproj\watchabuyin\watchabuyin\src\player.c(200): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\player.c(208): warning C4133: 'function': incompatible types - from 'char [20]' to 'SJson *'
-d:\2d\2dproj\watchabuyin\watchabuyin\src\player.c(227): warning C4305: '-=': truncation from 'double' to 'float'
-  projectile.c
-d:\2d\2dproj\watchabuyin\watchabuyin\src\projectile.c(64): warning C4133: 'function': incompatible types - from 'Sprite *' to 'SDL_Texture *'
-d:\2d\2dproj\watchabuyin\watchabuyin\src\projectile.c(160): warning C4305: '-=': truncation from 'double' to 'float'
-d:\2d\2dproj\watchabuyin\watchabuyin\src\projectile.c(199): warning C4305: 'function': truncation from 'double' to 'float'
-d:\2d\2dproj\watchabuyin\watchabuyin\src\projectile.c(200): warning C4305: 'function': truncation from 'double' to 'float'
-d:\2d\2dproj\watchabuyin\watchabuyin\src\projectile.c(201): warning C4305: 'function': truncation from 'double' to 'float'
-d:\2d\2dproj\watchabuyin\watchabuyin\src\projectile.c(286): warning C4026: function declared with formal parameter list
-  Generating Code...
+﻿  player.c
+d:\2d\2dproj\watchabuyin\watchabuyin\src\player.c(38): warning C4305: 'initializing': truncation from 'double' to 'float'
+d:\2d\2dproj\watchabuyin\watchabuyin\src\player.c(180): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\player.c(188): warning C4133: 'function': incompatible types - from 'char [20]' to 'SJson *'
+d:\2d\2dproj\watchabuyin\watchabuyin\src\player.c(207): warning C4305: '-=': truncation from 'double' to 'float'
   WatchaBuyin.vcxproj -> D:\2D\2DProj\WatchaBuyin\WatchaBuyin\WatchaBuyin.exe
