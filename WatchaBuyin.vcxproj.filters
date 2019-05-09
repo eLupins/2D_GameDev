@@ -308,6 +308,9 @@
     <ClCompile Include="src\projectile.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\bat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Makefile">
@@ -377,6 +380,12 @@
       <Filter>Config</Filter>
     </None>
     <None Include="actors\potion.actor">
+      <Filter>actors</Filter>
+    </None>
+    <None Include="actors\bat.actor">
+      <Filter>actors</Filter>
+    </None>
+    <None Include="actors\slime.actor">
       <Filter>actors</Filter>
     </None>
   </ItemGroup>

@@ -186,6 +186,8 @@ int main(int argc, char * argv[])
 		//for opening editor
 		if ((gf2d_input_key_down("exit")) && gf2d_input_key_down("melee")) {
 			
+
+
 		}
    //     slog("Rendering at %f FPS",gf2d_graphics_get_frames_per_second());
     }

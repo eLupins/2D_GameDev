@@ -127,6 +127,7 @@ void player_draw(Entity *self)
 }
 //INPUT HERE
 
+//handle upgrades when the player levels up
 void on_level_up() {
 	
 	//every time the player earns 20 coins, level up

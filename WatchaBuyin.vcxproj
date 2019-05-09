@@ -184,6 +184,7 @@
     <ClInclude Include="include\windows_common.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\bat.c" />
     <ClCompile Include="src\camera.c" />
     <ClCompile Include="src\editor.c" />
     <ClCompile Include="src\entity_bard.c" />
@@ -234,6 +235,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="actors\bard.actor" />
+    <None Include="actors\bat.actor" />
     <None Include="actors\button.actor" />
     <None Include="actors\charge_bolt.actor" />
     <None Include="actors\crysalis.actor" />
@@ -244,6 +246,7 @@
     <None Include="actors\player.actor" />
     <None Include="actors\potion.actor" />
     <None Include="actors\save_icon.actor" />
+    <None Include="actors\slime.actor" />
     <None Include="actors\space_bug.actor" />
     <None Include="config\editor_main.json" />
     <None Include="config\font.cfg" />

@@ -82,6 +82,9 @@ Entity *projectile_new(Vector2D position) {
 		NULL);
 
 	gf2d_actor_load(&self->actor, "actors/potion.actor");
+
+	//bs temporary projectile sprite change for when the player levels up
+	//not added to on level up because there are only 3 available sprites for the potion upgrade
 	if (player_get()->playerlvl == 1) {
 		self->actor.sprite = gf2d_sprite_load_image("images/potion2.png");
 	}
