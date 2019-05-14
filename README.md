@@ -4,8 +4,9 @@ Watcha Buyin
 
 Using engineerOfLies seed project gameframework2d for his class. 
 
-__ Deliverables: __
+Deliverables:
 
+____________________________________
 
 -Procedural dungeon generation ✓
 
