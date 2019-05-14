@@ -32,10 +32,15 @@ Deliverables:
 -Audio ✓
 
 - Player progresssion ✓
+
   >Level-up ✓
+  
   >Speed boost ✓
+  
   >Potion upgrade ✓ 
+  
   >Health increase ✓
+  
 
 
 
