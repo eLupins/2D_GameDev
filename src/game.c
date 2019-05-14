@@ -20,6 +20,7 @@
 #include "gf2d_text.h"
 #include "projectile.h"
 #include "bat.h"
+#include "save_data.h"
 
 //SDL_Color col = { 255, 255, 255, 0 };
 

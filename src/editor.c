@@ -83,20 +83,23 @@ int editor_update(Window *win,List *updateList)
         if (!e)continue;
 		switch (e->index)
 		{
+
+			// @brief modified the editor window to have sprites load instead of world building
+			// Each case is a different option for a head sprite. 
 		case 110:
 			slog("HEAD 0");
-			//window_text_entry("enter file to load", editorData.filename, GF2DTEXTLEN, NULL, NULL);
+			//if I tried to load the pprites separately, they wouldn't size up well compared to the original sprite.
+			//reload the heads.png spritesheet and shift the frame every time. if I dont reload the spritesheet,
+			//it only flickers to the new sprite temporarily 
 			player_get()->actor.sprite = gf2d_sprite_load_all("images/editor_sprites/heads.png", 128, 128, 6, 1);
 			player_get()->actor.frame = 0;
 			break;
 		case 120:
 			slog("HEAD 1");
-			//player_get()->actor.frame = 1;
+		
 			player_get()->actor.sprite = gf2d_sprite_load_all("images/editor_sprites/heads.png", 128, 128, 6, 1);
 			player_get()->actor.frame = 1;
-			//player_get()->actor.sprite = gf2d_sprite_load_all
-			//player_get()->actor.frame = 1;
-			//window_yes_no("Create New Map, previous data lost?",editor_new_map,NULL,NULL,NULL);
+	
 			break;
 		case 130:
 			slog("HEAD 2");

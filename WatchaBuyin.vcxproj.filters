@@ -168,6 +168,9 @@
     <ClInclude Include="include\bat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\save_data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\camera.c">
@@ -312,6 +315,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\bat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\save_data.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
