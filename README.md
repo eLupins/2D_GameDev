@@ -2,7 +2,7 @@
 
 Watcha Buyin
 
-Using engineerOfLies seed project gameframework2d for his class. 
+Using engineerOfLies seed project gameframework2d for his class. Audio files used in this project are from freesound.org.
 
 Deliverables:
 
