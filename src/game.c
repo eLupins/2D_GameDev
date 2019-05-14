@@ -52,7 +52,7 @@ int main(int argc, char * argv[])
 	Sprite *poop = NULL;
 	//Font myFont; 
 	char* myScore = "Score: ";
-
+	FILE *file = NULL;
 	
 	
 //	myFont.filename = "fonts/SourceSansPro.ttf";
@@ -179,7 +179,12 @@ int main(int argc, char * argv[])
 			_quit = window_yes_no("Exit?", onExit, onCancel, NULL, NULL);
 		}
 
-		
+		if ((gf2d_input_key_pressed("2"))) {
+
+			save(file, player_get()->actor.sprite, player_get()->playerlvl, player_get()->score, player_get()->health);
+
+
+		}
 
 		//for opening editor
 		if ((gf2d_input_key_released("1"))) {
