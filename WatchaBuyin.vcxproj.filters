@@ -168,9 +168,6 @@
     <ClInclude Include="include\bat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\sprite_editor.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\camera.c">
@@ -315,9 +312,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\bat.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\sprite_editor.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

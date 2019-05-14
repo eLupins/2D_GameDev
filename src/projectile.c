@@ -40,11 +40,7 @@ static ProjectileData projData = {
 
 };
 
-Entity *get_projectile() {
 
-	return projectile;
-
-}
 
 Entity *projectile_new(Vector2D position, const char *name, char *actorfile) {
 
@@ -303,5 +299,11 @@ void projectile_spawn(Vector2D position, const char *name, SJson *args) {
 	gf2d_entity_draw(projectile);
 	gf2d_sound_play(projectile->sound[0], 0,1.0,  -1, -1);
 	projectile_update(projectile);
+
+}
+
+Entity *get_projectile() {
+
+	return projectile;
 
 }

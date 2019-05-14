@@ -115,6 +115,8 @@ int editor_update(Window *win,List *updateList)
 			player_get()->actor.frame = 5;
 		}
     }
+
+
     return 0;
 }
 

@@ -1,6 +1,27 @@
-﻿  editor.c
-d:\2d\2dproj\watchabuyin\watchabuyin\src\editor.c(29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\editor.c(30): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\editor.c(31): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-d:\2d\2dproj\watchabuyin\watchabuyin\src\editor.c(32): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+﻿  level.c
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(88): warning C4028: formal parameter 4 different from declaration
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(88): warning C4028: formal parameter 5 different from declaration
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(88): warning C4029: declared formal parameter list different from definition
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(104): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(141): warning C4018: '<': signed/unsigned mismatch
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(144): warning C4018: '<': signed/unsigned mismatch
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(208): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(209): warning C4305: 'function': truncation from 'double' to 'float'
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(212): warning C4305: 'function': truncation from 'double' to 'float'
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(236): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(237): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(349): warning C4244: 'function': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(379): warning C4244: 'function': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(420): warning C4244: 'function': conversion from 'double' to 'Sint32', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(421): warning C4244: 'function': conversion from 'double' to 'Sint32', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(426): warning C4244: 'function': conversion from 'double' to 'Sint32', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(427): warning C4244: 'function': conversion from 'double' to 'Sint32', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(433): warning C4244: 'function': conversion from 'double' to 'Sint32', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(434): warning C4244: 'function': conversion from 'double' to 'Sint32', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(440): warning C4244: 'function': conversion from 'double' to 'Sint32', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(441): warning C4244: 'function': conversion from 'double' to 'Sint32', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(446): warning C4244: 'function': conversion from 'double' to 'Sint32', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(447): warning C4244: 'function': conversion from 'double' to 'Sint32', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(452): warning C4244: 'function': conversion from 'double' to 'Sint32', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\level.c(453): warning C4244: 'function': conversion from 'double' to 'Sint32', possible loss of data
   WatchaBuyin.vcxproj -> D:\2D\2DProj\WatchaBuyin\WatchaBuyin\WatchaBuyin.exe

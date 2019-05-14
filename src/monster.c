@@ -3,6 +3,8 @@
 #include "level.h"
 #include "simple_logger.h"
 #include "entity_common.h"
+#include "player.h"
+#include "projectile.h"
 
 void monster_draw(Entity *self);
 void monster_think(Entity *self);
@@ -57,7 +59,8 @@ Entity *monster_new(Vector2D position,char *actorFile)
     vector2d_set(self->scaleCenter,64,64);
     vector3d_set(self->rotation,64,64,0);
     vector2d_set(self->flip,0,0);
-    
+	self->maxHealth = 3;
+	self->health = 3;
     self->think = monster_think;
     self->draw = monster_draw;
     self->update = monster_update;
@@ -78,11 +81,17 @@ void monster_draw(Entity *self)
 void monster_think(Entity *self)
 {
     //shop menu interacton
+
+	if (self->maxHealth <= 0) {
+		self->dead = 1;
+	}
 }
 
 void monster_update(Entity *self)
 {
-    entity_apply_gravity(self);
+	if (self->health <= 0) {
+		self->dead = 1;
+	}
 
 }
 
@@ -98,8 +107,19 @@ int  monster_touch(Entity *self,Entity *other)
 
 	if (gf2d_line_cmp(other->name, "player") != 0) {
 		gf2d_entity_deal_damage(other, self, self, 1, kick);
+		player_get()->health -= 1;
+
 
 	}
+
+	if (gf2d_line_cmp(other->name, "player_projectile") == 1) {
+		
+		int dmg = get_projectile()->damageCount;
+		gf2d_entity_deal_damage(self, other, other, 1, kick);
+		slog("MONSTER HEALTH: %i", self->maxHealth);
+	}
+
+
 
 	else {
 

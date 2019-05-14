@@ -7,7 +7,7 @@
 #include "level_graph.h"
 #include "projectile.h"
 #include "bat.h"
-#include "sprite_editor.h"
+
 
 static Entity *_player = NULL;
 static Entity * projectile = NULL;
@@ -201,10 +201,6 @@ void player_think(Entity *self)
 				
             }
 
-			if ((gf2d_input_key_released("1"))) {
-				launch_sprite_editor();
-			}
-		
 
 		
             break;

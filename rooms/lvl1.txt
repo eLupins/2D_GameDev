@@ -1,2 +1,3 @@
 rooms/r1.json
 rooms/testworld.json
+rooms/r2.json

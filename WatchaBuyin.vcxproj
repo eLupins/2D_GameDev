@@ -181,7 +181,6 @@
     <ClInclude Include="include\simple_json_value.h" />
     <ClInclude Include="include\simple_logger.h" />
     <ClInclude Include="include\spawn.h" />
-    <ClInclude Include="include\sprite_editor.h" />
     <ClInclude Include="include\UI.h" />
     <ClInclude Include="include\windows_common.h" />
   </ItemGroup>
@@ -232,7 +231,6 @@
     <ClCompile Include="src\simple_json_string.c" />
     <ClCompile Include="src\simple_logger.c" />
     <ClCompile Include="src\spawn.c" />
-    <ClCompile Include="src\sprite_editor.c" />
     <ClCompile Include="src\UI.c" />
     <ClCompile Include="src\windows_common.c" />
   </ItemGroup>

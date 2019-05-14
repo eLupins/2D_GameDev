@@ -250,7 +250,7 @@ void level_make_tile_layer(LevelInfo *linfo)
 				//each case refers to a different tile to draw
 			case 1:
 				gf2d_sprite_draw_to_surface(
-					gamelevel.tileSet,
+					gamelevel.topWall,
 					vector2d(i*linfo->tileSize.x, j*linfo->tileSize.y),
 					NULL,
 					NULL,
@@ -259,7 +259,7 @@ void level_make_tile_layer(LevelInfo *linfo)
 				break;
 			case 2:
 				gf2d_sprite_draw_to_surface(
-					gamelevel.topWall,
+					gamelevel.Pillar,
 					vector2d(i*linfo->tileSize.x, j*linfo->tileSize.y),
 					NULL,
 					NULL,
@@ -497,6 +497,11 @@ int body_body_touch(Body *self, Body *other, Collision *collision)
     if (selfEnt->touch)
     {
         slog("%s is touching %s",selfEnt->name,otherEnt->name);
+		if (selfEnt->name == "monster" && otherEnt->name == "player_projectile") {
+
+			gf2d_entity_deal_damage(selfEnt, otherEnt, otherEnt, otherEnt->damageCount, vector2d(0,0));
+
+		}
         return selfEnt->touch(selfEnt,otherEnt);
     }
     return 0;
