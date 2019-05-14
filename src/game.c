@@ -19,9 +19,10 @@
 #include "player.h"
 #include "gf2d_text.h"
 #include "projectile.h"
+#include "bat.h"
 
 //SDL_Color col = { 255, 255, 255, 0 };
-Color col;
+
 static int _done = 0;
 static Window *_quit = NULL;
 char scoreText[32];
@@ -50,11 +51,7 @@ int main(int argc, char * argv[])
 	Sprite *poop = NULL;
 	//Font myFont; 
 	char* myScore = "Score: ";
-	col.r = 1;
-	col.g = 1;
-	col.b = 1;
-	col.a = 1;
-	col.ct = CT_RGBAf;
+	
 	
 //	myFont.filename = "fonts/SourceSansPro.ttf";
 
@@ -100,9 +97,6 @@ int main(int argc, char * argv[])
     
 	create_level("rooms/lvl1.txt"); //text file list of level .jsons
 
-	//////my ui system/////
-	//UI_system_init(512);
-
    SDL_ShowCursor(SDL_DISABLE);
    
 
@@ -125,10 +119,10 @@ int main(int argc, char * argv[])
     /*main game loop*/
     while(!_done)
     {
-		
         gf2d_input_update();
         /*update things here*/
         gf2d_windows_update_all();
+
 		SDL_PollEvent(&e);
 		switch (e.type)
 		{
@@ -146,6 +140,7 @@ int main(int argc, char * argv[])
         }
         else
         {
+		
             gf2d_mouse_update();
         }
 		gf2d_particle_emitter_update(pe);
@@ -156,37 +151,38 @@ int main(int argc, char * argv[])
                 // DRAW WORLD
                 level_draw();
 				gui_draw_hud();
-
+			
 
 				//gui_set_energy(2.0f); <-- might need this for health later
 
                 if (!editorMode)
                 {
                     gf2d_entity_update_all();
-					//ui_update_all();
-					//ui_update_all();
                 }
-
-				//gf2d_fonts_load("fonts/SourceSansPro.ttf");
-			
-
                 // Draw entities
-
+				gf2d_windows_draw_all();
             if (editorMode)
             {
                 gf2d_mouse_draw();
             }
+
+			else {
+				gui_draw_hud();
+			}
+
         gf2d_grahics_next_frame();// render current draw frame and skip to the next frame
         
-        if ((gf2d_input_key_down("exit"))&&(_quit == NULL))
-        {
-            _quit = window_yes_no("Exit?",onExit,onCancel,NULL,NULL);
-        }
+		if ((gf2d_input_command_down("exit")) && (_quit == NULL))
+		{
+			_quit = window_yes_no("Exit?", onExit, onCancel, NULL, NULL);
+		}
+
+		
 
 		//for opening editor
-		if ((gf2d_input_key_down("exit")) && gf2d_input_key_down("melee")) {
+		if ((gf2d_input_key_released("1"))) {
 			
-
+			editor_launch();
 
 		}
    //     slog("Rendering at %f FPS",gf2d_graphics_get_frames_per_second());

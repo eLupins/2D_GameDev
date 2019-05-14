@@ -60,6 +60,15 @@ typedef struct
     float       slop;           /**<how much to correct for body overlap*/
 }Space;
 
+typedef struct CollisionFilter_S
+{
+	Uint8       worldclip;      /**<if this body should clip the world bounds and static shapes*/
+	Uint32      cliplayer;      /**<only bodies that share one or more layers will collide with each other*/
+	Uint32      touchlayer;     /**<only bodies that share one or more layers will have their touch functions called*/
+	Uint32      team;           /**<bodies that share a team will NOT interact*/
+	Body       *ignore;         /**<this body will specifically be skipped in checks*/
+}CollisionFilter;
+
 
 /**
  * @brief initializes a body to zero
@@ -195,4 +204,22 @@ void gf2d_space_body_collision_test_filter(Space *space,Shape shape, Collision *
  */
 Shape gf2d_body_to_shape(Body *a);
 
+/**
+* @brief check if the provided shape intersects anything in the space
+* @param space the space to test
+* @param shape the shape to check with
+* @param filter the filter to use for testing
+* @return a List of collisions data for the test
+*/
+List *gf2d_collision_check_space_shape(Space *space, Shape shape, CollisionFilter filter);
+
+/**
+* @brief perform a linear trace through the space
+* @param space the space to test
+* @param start the starting position of the trace
+* @param end the end point of the trace
+* @param filter the filter to apply to the test
+* @return a collision structure.  Note the timeStep will be the percentage of the trace that was completed before a collision was triggered
+*/
+Collision gf2d_collision_trace_space(Space *space, Vector2D start, Vector2D end, CollisionFilter filter);
 #endif

@@ -6,6 +6,8 @@
 #include "entity_common.h"
 #include "level_graph.h"
 #include "projectile.h"
+#include "bat.h"
+#include "sprite_editor.h"
 
 static Entity *_player = NULL;
 static Entity * projectile = NULL;
@@ -130,12 +132,14 @@ void player_draw(Entity *self)
 //handle upgrades when the player levels up
 void on_level_up() {
 	
+	Entity *proj = get_projectile();
 	//every time the player earns 20 coins, level up
 	if (player_get()->score / 20 > player_get()->playerlvl) {
 		player_get()->playerlvl += 1;
 		player_get()->maxHealth += 1;
 		player_get()->velocity.x += 1.5;
 		player_get()->velocity.y += 1.5;
+		
 		//player_get()->velocity += speedIncrease;
 	}
 
@@ -177,21 +181,32 @@ void player_think(Entity *self)
 			///////////////////////////////////////////
             if (((gf2d_input_command_pressed("jump"))&&(self->grounded))&&(!self->jumpcool))
             {
+
+				/*
                 self->velocity.y -= 10;
                 self->jumpcool = gf2d_actor_get_frames_remaining(&self->actor);
                 gf2d_sound_play(self->sound[0],0,1,-1,-1);
                 gf2d_actor_set_action(&self->actor,"jump");
+				*/
+				//bat_spawn(vector2d(0, 0), "bat", "actors/bat.actor");
+				slog("BAT");
             }
             if (gf2d_input_command_released("melee"))
             {
               //  gf2d_actor_set_action(&self->actor,"hack");
               //  self->cooldown = gf2d_actor_get_frames_remaining(&self->actor);
-				projectile_spawn(_player->position, "actors/potion.actor");
+				projectile_spawn(_player->position, "player_projectile", "actors/potion.actor");
                 slog("cooldown set to %i",self->cooldown);
              //   self->state = ES_Attacking;
-			
 				
             }
+
+			if ((gf2d_input_key_released("1"))) {
+				launch_sprite_editor();
+			}
+		
+
+		
             break;
         default:
             break;
@@ -252,8 +267,26 @@ void player_update(Entity *self)
         case ES_Dead:
             return;
     }
+
+	vector2d_add(self->hatFinalPos, self->position, self->hatOffset);
+
+	if (self->hat) {
+
+		gf2d_sprite_draw(
+			self->hat,
+			self->hatFinalPos,
+			&self->scale,
+			&self->scaleCenter,
+			&self->rotation,
+			&self->flip,
+			NULL,
+			0);
+
+	}
     
 }
+
+
 
 int player_touch(Entity *self,Entity *other)
 {

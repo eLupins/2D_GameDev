@@ -72,7 +72,10 @@ typedef struct Entity_S
     void *data;                             /**<any other game specific data can be referenced here*/
 	int score;
 	int playerlvl;
-
+	int damageCount;
+	Sprite *hat;
+	Vector2D hatOffset;
+	Vector2D hatFinalPos;
 }Entity;
 
 /**

@@ -4,6 +4,7 @@
 #include "monster.h"
 #include "pickup.h"
 #include "simple_logger.h"
+#include "bat.h"
 
 static Spawn spawnlist[] = 
 {
@@ -19,6 +20,10 @@ static Spawn spawnlist[] =
         "pickup_start",
         pickup_spawn
     },
+	{
+		"bat_start",
+		bat_spawn
+	},
     {0}
 };
 

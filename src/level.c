@@ -6,6 +6,7 @@
 #include "gf2d_graphics.h"
 #include "gf2d_config.h"
 #include <stdio.h>
+#include "bat.h"
 
 typedef struct
 {
@@ -363,6 +364,9 @@ void level_spawn_entities(SJson *spawnList)
         sj_value_as_vector2d(sj_object_get_value(item,"position"),&position);
         spawn_entity(sj_get_string_value(sj_object_get_value(item,"name")),position,sj_object_get_value(item,"args"));
     }
+
+	//bat_spawn(vector2d(0, 0), "actors/bat.actor");
+
 }
 
 void level_update_tile(LevelInfo *linfo,Vector2D position,Uint32 tile)

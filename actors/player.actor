@@ -1,7 +1,7 @@
-sprite: images/entities/player_standin2.png
+sprite: images/editor_sprites/heads.png
 frameWidth: 128
 frameHeight: 128
-framesPerLine: 16
+framesPerLine: 6
 scale: 0.7,0.7
 color: 255,255,255,255
 colorSpecial: 10,255,100,255

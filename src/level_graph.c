@@ -152,6 +152,8 @@ void create_level(char* masterList) {
 		gen_new_node(liveRooms[rand() % roomTypes]);
 
 	}
+
+
 }
 
 char* begin_level() {

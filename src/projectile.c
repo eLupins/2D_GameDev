@@ -25,7 +25,6 @@ float lifetime = 3.0;
 typedef struct {
 
 	int velocity;
-	int dmgCount;
 	float life;
 	Uint8 canDie;
 	float baseAcceleration;
@@ -34,7 +33,6 @@ typedef struct {
 
 static ProjectileData projData = {
 
-	2,
 	2,
 	5.0,
 	0,
@@ -48,7 +46,7 @@ Entity *get_projectile() {
 
 }
 
-Entity *projectile_new(Vector2D position) {
+Entity *projectile_new(Vector2D position, const char *name, char *actorfile) {
 
 	Entity *self;
 	int w, h;
@@ -59,15 +57,15 @@ Entity *projectile_new(Vector2D position) {
 		return NULL;
 	}
 
-	gf2d_line_cpy(self->name, "player_projectile");
+	gf2d_line_cpy(self->name, name);
 	self->parent = player_get();
 	SDL_QueryTexture(self->actor.sprite, NULL, NULL, &w, &h);
 	//slog("PROJECTILE.C - QUERYTEXTURE RESULTS: ", w, h);
 	self->shape = gf2d_shape_rect(-16, -16, 30, 30);
-
+	self->damageCount = 1;
 	gf2d_body_set(
 		&self->body,
-		"player_projectile",
+		name,
 		//        0,//no layer
 		ALL_LAYERS &~PICKUP_LAYER,//player layers
 		1,
@@ -81,15 +79,17 @@ Entity *projectile_new(Vector2D position) {
 		NULL,
 		NULL);
 
-	gf2d_actor_load(&self->actor, "actors/potion.actor");
+	gf2d_actor_load(&self->actor, actorfile);
 
 	//bs temporary projectile sprite change for when the player levels up
 	//not added to on level up because there are only 3 available sprites for the potion upgrade
 	if (player_get()->playerlvl == 1) {
 		self->actor.sprite = gf2d_sprite_load_image("images/potion2.png");
+		self->damageCount += 1;
 	}
 	if (player_get()->playerlvl == 2) {
 		self->actor.sprite = gf2d_sprite_load_image("images/potion3.png");
+		self->damageCount += 1;
 	}
 
 	gf2d_actor_set_action(&self->actor, "idle");
@@ -275,7 +275,7 @@ void projectile_think(Entity *self) {
 
 		else {
 			gf2d_sound_play(projectile->sound[1], 0, 1.0, -1, -1);
-
+			//gf2d_entity_deal_damage(
 			self->dead = 1;
 			lifetime = 3.0;
 
@@ -296,10 +296,10 @@ void projectile_die() {
 
 
 
-void projectile_spawn(Vector2D position, SJson *args) {
+void projectile_spawn(Vector2D position, const char *name, SJson *args) {
 
 
-	projectile_new(player_get()->position);
+	projectile = projectile_new(position, name, args);
 	gf2d_entity_draw(projectile);
 	gf2d_sound_play(projectile->sound[0], 0,1.0,  -1, -1);
 	projectile_update(projectile);

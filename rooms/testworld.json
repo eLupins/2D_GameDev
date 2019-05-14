@@ -42,7 +42,8 @@
 			},
 			{
 				"name": "monster_start",
-				"position": [ 990, 128 ]
+				"position": [ 990, 128 ],
+				"args": "actors/bat.actor"
 			},
 			{
 				"name": "pickup_start",

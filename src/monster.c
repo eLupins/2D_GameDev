@@ -12,9 +12,9 @@ int  monster_damage(Entity *self,int amount, Entity *source);
 void monster_die(Entity *self);
 Entity *monster_new(Vector2D position,char *actorFile);
 
-void monster_spawn(Vector2D position,SJson *args)
+void monster_spawn(Vector2D position, SJson *args)
 {
-    monster_new(position,"actors/bard.actor");
+    monster_new(position, sj_get_string_value(args));
 }
 
 
@@ -48,8 +48,8 @@ Entity *monster_new(Vector2D position,char *actorFile)
     gf2d_actor_load(&self->actor,actorFile);
     gf2d_actor_set_action(&self->actor,"idle");
     
-    self->sound[0] = gf2d_sound_load("sounds/jump_10.wav",1,-1);
-
+   // self->sound[0] = gf2d_sound_load("music/bat_chirp.wav",1,-1);
+	self->velocity = vector2d(1.0, 10);
     
     vector2d_copy(self->position,position);
     
@@ -87,9 +87,15 @@ void monster_update(Entity *self)
 
 int  monster_touch(Entity *self,Entity *other)
 {
+
+	Vector2D kick = { 1.0,1.0 };
     slog("monster touch called");
     if (!other)return 0;
-    if (gf2d_line_cmp(other->name,"player") != 0)return 0;
+
+	if (gf2d_line_cmp(other->name, "player") != 0) {
+		gf2d_entity_deal_damage(other, self, self, 1, kick);
+
+	}
     entity_damage(other,self,5,10);
     return 0;
 }

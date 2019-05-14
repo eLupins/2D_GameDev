@@ -6,4 +6,6 @@
 
 void monster_spawn(Vector2D position,SJson *args);
 
+int  monster_touch(Entity *self, Entity *other);
+
 #endif
