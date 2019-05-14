@@ -5,6 +5,8 @@ Watcha Buyin
 Using engineerOfLies seed project gameframework2d for his class. 
 
 Deliverables:
+
+
 -Procedural dungeon generation ✓
 -Real time combat ✓
 -Buy/Sell menus
