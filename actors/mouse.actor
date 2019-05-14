@@ -1,4 +1,4 @@
-sprite: images/potion.png
+sprite: images/pointer.png
 frameWidth: 32
 frameHeight: 32
 framesPerLine: 16

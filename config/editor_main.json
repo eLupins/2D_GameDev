@@ -20,7 +20,7 @@
                 "id" : 1,
                 "bounds": [0,0,1,32],
                 "color" : [255,255,255,255],
-                "text":"YMIR EDITOR",
+                "text":" ",
                 "justify" : "center",
                 "style":"H1"
             },
@@ -30,7 +30,7 @@
                 "id" : 2,
                 "bounds": [0,0,1,32],
                 "color" : [255,255,255,255],
-                "text":"untitled file",
+                "text":"Sprite Editor",
                 "justify" : "left",
                 "style":"H2"
             },
@@ -41,12 +41,12 @@
                 "bounds": [2,32,1,32],
                 "color" : [255,255,255,255],
                 "style": "horizontal",
-                "item_size" : [32,32],
+                "item_size" : [24,24],
                 "elements":
                 [
                     {
                         "type": "button",
-                        "name": "load",
+                        "name": "Head_0",
                         "id" : 110,
                         "bounds": [0,0,32,32],
                         "color" : [255,255,255,255],
@@ -59,7 +59,7 @@
                             "id" : 111,
                             "bounds": [0,4,32,32],
                             "color" : [0,0,0,255],
-                            "text":"Load",
+                            "text":"H0",
                             "align" : "middle",
                             "justify" : "center",
                             "style":"normal"
@@ -76,7 +76,7 @@
                     },
                     {
                         "type": "button",
-                        "name": "save",
+                        "name": "Head_1",
                         "id" : 120,
                         "bounds": [0,0,32,32],
                         "color" : [255,0,0,255],
@@ -89,7 +89,7 @@
                             "id" : 121,
                             "bounds": [0,4,32,32],
                             "color" : [0,0,0,255],
-                            "text":"save",
+                            "text":"H1",
                             "align" : "middle",
                             "justify" : "center",
                             "style":"normal"
@@ -106,7 +106,7 @@
                     },
                     {
                         "type": "button",
-                        "name": "new",
+                        "name": "Head_2",
                         "id" : 130,
                         "bounds": [0,0,32,32],
                         "color" : [255,0,0,255],
@@ -119,7 +119,7 @@
                             "id" : 131,
                             "bounds": [0,4,32,32],
                             "color" : [0,0,0,255],
-                            "text":"new",
+                            "text":"H2",
                             "align" : "middle",
                             "justify" : "center",
                             "style":"normal"
@@ -133,7 +133,69 @@
                             "color" : [255,0,0,255],
                             "actor" : "actors/new_icon.actor"
                             }
-                    }
+						},
+					{
+                        "type": "button",
+                        "name": "Head_3",
+                        "id" : 140,
+                        "bounds": [0,0,32,32],
+                        "color" : [255,0,0,255],
+                        "highColor" : [255,0,0,255],
+                        "pressColor" : [255,0,0,255],
+                        "label" :
+                            {
+                            "type": "label",
+                            "name": "new_l",
+                            "id" : 141,
+                            "bounds": [0,4,32,32],
+                            "color" : [0,0,0,255],
+                            "text":"H3",
+                            "align" : "middle",
+                            "justify" : "center",
+                            "style":"normal"
+                            },
+                        "actor" :
+                            {
+                            "type": "actor",
+                            "name": "image",
+                            "id" : 142,
+                            "bounds": [0,0,32,32],
+                            "color" : [255,0,0,255],
+                            "actor" : "actors/new_icon.actor"
+                            }
+					},
+				{
+                        "type": "button",
+                        "name": "Head_4",
+                        "id" : 150,
+                        "bounds": [0,0,32,32],
+                        "color" : [255,0,0,255],
+                        "highColor" : [255,0,0,255],
+                        "pressColor" : [255,0,0,255],
+                        "label" :
+                            {
+                            "type": "label",
+                            "name": "new_l",
+                            "id" : 151,
+                            "bounds": [0,4,32,32],
+                            "color" : [0,0,0,255],
+                            "text":"H4",
+                            "align" : "middle",
+                            "justify" : "center",
+                            "style":"normal"
+                            },
+                        "actor" :
+                            {
+                            "type": "actor",
+                            "name": "image",
+                            "id" : 152,
+                            "bounds": [0,0,32,32],
+                            "color" : [255,0,0,255],
+                            "actor" : "actors/new_icon.actor"
+                            }
+					}					
+					
+					
                 ]
             }
         ]

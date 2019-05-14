@@ -7,7 +7,7 @@
 #include "simple_logger.h"
 #include "simple_json.h"
 #include "windows_common.h"
-
+#include "player.h"
 
 typedef struct EditorData_S
 {
@@ -51,6 +51,9 @@ void editor_new_map(void *data)
 
 int editor_update(Window *win,List *updateList)
 {
+
+	gf2d_mouse_load("actors/mouse.actor");
+	gf2d_mouse_update();
     int i,count;
     Element *e;
     Vector2D mouse,tile;
@@ -78,17 +81,39 @@ int editor_update(Window *win,List *updateList)
     {
         e = (Element *)gf2d_list_get_nth(updateList,i);
         if (!e)continue;
-        switch(e->index)
-        {
-            case 110:
-                slog("load");
-                window_text_entry("enter file to load", editorData.filename, GF2DTEXTLEN, NULL, NULL);
-                break;
-            case 130:
-                slog("new file");
-                window_yes_no("Create New Map, previous data lost?",editor_new_map,NULL,NULL,NULL);
-                break;
-        }
+		switch (e->index)
+		{
+		case 110:
+			slog("HEAD 0");
+			//window_text_entry("enter file to load", editorData.filename, GF2DTEXTLEN, NULL, NULL);
+			player_get()->actor.sprite = gf2d_sprite_load_all("images/editor_sprites/heads.png", 128, 128, 6, 1);
+			player_get()->actor.frame = 0;
+			break;
+		case 120:
+			slog("HEAD 1");
+			//player_get()->actor.frame = 1;
+			player_get()->actor.sprite = gf2d_sprite_load_all("images/editor_sprites/heads.png", 128, 128, 6, 1);
+			player_get()->actor.frame = 1;
+			//player_get()->actor.sprite = gf2d_sprite_load_all
+			//player_get()->actor.frame = 1;
+			//window_yes_no("Create New Map, previous data lost?",editor_new_map,NULL,NULL,NULL);
+			break;
+		case 130:
+			slog("HEAD 2");
+			player_get()->actor.sprite = gf2d_sprite_load_all("images/editor_sprites/heads.png", 128, 128, 6, 1);
+			player_get()->actor.frame = 2;
+			break;
+		case 140:
+			slog("HEAD 3");
+			player_get()->actor.sprite = gf2d_sprite_load_all("images/editor_sprites/heads.png", 128, 128, 6, 1);
+			player_get()->actor.frame = 3;
+			break;
+
+		case 150:
+			slog("HEAD 4");
+			player_get()->actor.sprite = gf2d_sprite_load_all("images/editor_sprites/heads.png", 128, 128, 6, 1);
+			player_get()->actor.frame = 5;
+		}
     }
     return 0;
 }

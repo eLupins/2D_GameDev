@@ -1,3 +1,6 @@
-﻿  spawn.c
-d:\2d\2dproj\watchabuyin\watchabuyin\src\spawn.c(23): warning C4028: formal parameter 2 different from declaration
+﻿  editor.c
+d:\2d\2dproj\watchabuyin\watchabuyin\src\editor.c(29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\editor.c(30): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\editor.c(31): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\2d\2dproj\watchabuyin\watchabuyin\src\editor.c(32): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   WatchaBuyin.vcxproj -> D:\2D\2DProj\WatchaBuyin\WatchaBuyin\WatchaBuyin.exe

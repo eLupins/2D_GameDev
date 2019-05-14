@@ -87,7 +87,7 @@ Entity *projectile_new(Vector2D position, const char *name, char *actorfile) {
 		self->actor.sprite = gf2d_sprite_load_image("images/potion2.png");
 		self->damageCount += 1;
 	}
-	if (player_get()->playerlvl == 2) {
+	if (player_get()->playerlvl >= 2) {
 		self->actor.sprite = gf2d_sprite_load_image("images/potion3.png");
 		self->damageCount += 1;
 	}

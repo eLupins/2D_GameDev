@@ -83,6 +83,7 @@ void monster_think(Entity *self)
 void monster_update(Entity *self)
 {
     entity_apply_gravity(self);
+
 }
 
 int  monster_touch(Entity *self,Entity *other)
@@ -90,11 +91,20 @@ int  monster_touch(Entity *self,Entity *other)
 
 	Vector2D kick = { 1.0,1.0 };
     slog("monster touch called");
-    if (!other)return 0;
+	if (!other)
+	{
+		return 0;
+	}
 
 	if (gf2d_line_cmp(other->name, "player") != 0) {
 		gf2d_entity_deal_damage(other, self, self, 1, kick);
 
+	}
+
+	else {
+
+		Vector2D nv = { 0 };
+		vector2d_reflect(&nv, self->position, self->velocity);
 	}
     entity_damage(other,self,5,10);
     return 0;

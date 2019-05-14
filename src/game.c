@@ -51,6 +51,7 @@ int main(int argc, char * argv[])
 	Sprite *poop = NULL;
 	//Font myFont; 
 	char* myScore = "Score: ";
+
 	
 	
 //	myFont.filename = "fonts/SourceSansPro.ttf";
@@ -72,7 +73,7 @@ int main(int argc, char * argv[])
     init_logger("gf2d.log");
     slog("---==== BEGIN ====---");
     gf2d_graphics_initialize(
-        "gf2d",
+        "WATCHA BUYIN?",
         1200,
         720,
         1200,
@@ -97,7 +98,7 @@ int main(int argc, char * argv[])
     
 	create_level("rooms/lvl1.txt"); //text file list of level .jsons
 
-   SDL_ShowCursor(SDL_DISABLE);
+   SDL_ShowCursor(SDL_ENABLE);
    
 
 
@@ -149,26 +150,26 @@ int main(int argc, char * argv[])
         // all drawing should happen betweem clear_screen and next_frame
             //backgrounds drawn first
                 // DRAW WORLD
-                level_draw();
-				gui_draw_hud();
-			
+        level_draw();
+		gui_draw_hud();
+		
 
-				//gui_set_energy(2.0f); <-- might need this for health later
+		//gui_set_energy(2.0f); <-- might need this for health later
 
-                if (!editorMode)
-                {
-                    gf2d_entity_update_all();
-                }
+        if (!editorMode)
+        {
+            gf2d_entity_update_all();
+        }
                 // Draw entities
-				gf2d_windows_draw_all();
-            if (editorMode)
-            {
-                gf2d_mouse_draw();
-            }
+		gf2d_windows_draw_all();
+		if (editorMode)
+        {
+			gf2d_mouse_draw();
+        }
 
-			else {
-				gui_draw_hud();
-			}
+		else {
+			gui_draw_hud();
+		}
 
         gf2d_grahics_next_frame();// render current draw frame and skip to the next frame
         
@@ -183,6 +184,9 @@ int main(int argc, char * argv[])
 		if ((gf2d_input_key_released("1"))) {
 			
 			editor_launch();
+			gf2d_mouse_load("actors/mouse.actor");
+			gf2d_mouse_draw();
+
 
 		}
    //     slog("Rendering at %f FPS",gf2d_graphics_get_frames_per_second());
