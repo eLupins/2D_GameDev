@@ -1,0 +1,14 @@
+sprite: images/entities/slime.png
+frameWidth: 128
+frameHeight: 128
+framesPerLine: 16
+scale: 0.7,0.7
+color: 255,255,255,255
+colorSpecial: 10,255,100,255
+
+action: idle
+startFrame: 0
+endFrame: 0
+frameRate: 1
+type:   loop
+
